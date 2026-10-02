@@ -194,9 +194,33 @@ const queryForm = document.querySelector('#query-form');
 if (toast) {
 	[leadForm, queryForm].filter(Boolean).forEach(form => form.addEventListener('submit', event => {
 		event.preventDefault();
-		event.currentTarget.reset();
+		const nameInput = form.querySelector('[name="name"]');
+		const phoneInput = form.querySelector('[name="phone"]');
+		const queryInput = form.querySelector('[name="query"]');
+
+		const name = nameInput ? nameInput.value.trim() : '';
+		const phone = phoneInput ? phoneInput.value.trim() : '';
+		const query = queryInput ? queryInput.value.trim() : '';
+
+		toast.textContent = "Connecting your query directly via WhatsApp... ✦";
 		toast.classList.add('show');
-		setTimeout(() => toast.classList.remove('show'), 3500);
+
+		const waMessage = encodeURIComponent(
+			`*Hello RoboNex AI!* 🤖\n\nI want to book a complimentary 45-min hands-on lab trial session.\n\n` +
+			`👤 *Parent / Student Name:* ${name}\n` +
+			`📞 *Phone / WhatsApp:* ${phone}\n` +
+			`💡 *Age & Interest:* ${query}\n\n` +
+			`_Sent via RoboNex AI Website_`
+		);
+
+		setTimeout(() => {
+			window.open(`https://wa.me/919931023041?text=${waMessage}`, '_blank');
+			form.reset();
+			setTimeout(() => {
+				toast.textContent = "Thanks! Your query has been forwarded to WhatsApp. ✦";
+			}, 1000);
+			setTimeout(() => toast.classList.remove('show'), 4500);
+		}, 700);
 	}));
 }
 const definitionPanel = document.querySelector('#definition-panel');
@@ -1011,3 +1035,237 @@ if (document.readyState === 'loading') {
 } else {
 	initGlitterEngine();
 }
+
+
+// Age & Cohort Course Finder Switcher
+function initAgeFinder() {
+	const pills = document.querySelectorAll('.age-pill-btn');
+	const cards = document.querySelectorAll('.age-roadmap-card');
+	if (!pills.length || !cards.length) return;
+
+	pills.forEach(pill => {
+		pill.addEventListener('click', () => {
+			const targetAge = pill.getAttribute('data-age');
+			pills.forEach(p => p.classList.remove('active'));
+			pill.classList.add('active');
+
+			cards.forEach(card => {
+				if (card.getAttribute('data-age-group') === targetAge) {
+					card.classList.add('active');
+				} else {
+					card.classList.remove('active');
+				}
+			});
+		});
+	});
+}
+
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', initAgeFinder);
+} else {
+	initAgeFinder();
+}
+
+
+
+
+
+// ========================================================
+// ROBO CHAT / SMS TEXT BOX POPUP HANDLER
+// ========================================================
+function initRoboChatBox() {
+	const mascotBtn = document.getElementById('robo-mascot-btn');
+	const chatPopup = document.getElementById('robo-chat-popup');
+	const closeBtn = document.getElementById('robo-chat-close');
+	const input = document.getElementById('robo-chat-input');
+	const sendSmsBtn = document.getElementById('robo-send-sms-btn');
+	const sendWaBtn = document.getElementById('robo-send-wa-btn');
+	const chips = document.querySelectorAll('.quick-chip-btn');
+	const toast = document.querySelector('.toast');
+
+	if (!mascotBtn || !chatPopup) return;
+
+	function openPopup() {
+		chatPopup.classList.add('active');
+		chatPopup.setAttribute('aria-hidden', 'false');
+		mascotBtn.setAttribute('aria-expanded', 'true');
+		if (input) {
+			setTimeout(() => input.focus(), 150);
+		}
+	}
+
+	function closePopup() {
+		chatPopup.classList.remove('active');
+		chatPopup.setAttribute('aria-hidden', 'true');
+		mascotBtn.setAttribute('aria-expanded', 'false');
+	}
+
+	mascotBtn.addEventListener('click', (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		if (chatPopup.classList.contains('active')) {
+			closePopup();
+		} else {
+			openPopup();
+		}
+	});
+
+	if (closeBtn) {
+		closeBtn.addEventListener('click', (e) => {
+			e.stopPropagation();
+			closePopup();
+		});
+	}
+
+	// Quick chips click
+	chips.forEach(chip => {
+		chip.addEventListener('click', () => {
+			if (input) {
+				input.value = chip.getAttribute('data-text') || chip.textContent.trim();
+				input.focus();
+			}
+		});
+	});
+
+	// Send Normal Phone SMS
+	if (sendSmsBtn) {
+		sendSmsBtn.addEventListener('click', () => {
+			const text = (input && input.value.trim()) || "Hi RoboNex AI, I want to inquire about your robotics and AI learning classes. Please guide me.";
+			const encoded = encodeURIComponent(text);
+			if (toast) {
+				toast.textContent = "Opening phone SMS app with your message... 📱";
+				toast.classList.add('show');
+				setTimeout(() => toast.classList.remove('show'), 3500);
+			}
+			window.location.href = `sms:+919931023041?body=${encoded}`;
+		});
+	}
+
+	// Send WhatsApp
+	if (sendWaBtn) {
+		sendWaBtn.addEventListener('click', () => {
+			const text = (input && input.value.trim()) || "Hi RoboNex AI, I want to inquire about your robotics and AI learning classes. Please guide me.";
+			const encoded = encodeURIComponent(text);
+			if (toast) {
+				toast.textContent = "Connecting to WhatsApp... 💬";
+				toast.classList.add('show');
+				setTimeout(() => toast.classList.remove('show'), 3500);
+			}
+			window.open(`https://wa.me/919931023041?text=${encoded}`, '_blank');
+		});
+	}
+
+	// Close on Escape key
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && chatPopup.classList.contains('active')) {
+			closePopup();
+		}
+	});
+
+	// Close when clicking outside
+	document.addEventListener('click', (e) => {
+		if (chatPopup.classList.contains('active') && !chatPopup.contains(e.target) && !mascotBtn.contains(e.target)) {
+			closePopup();
+		}
+	});
+}
+
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', initRoboChatBox);
+} else {
+	initRoboChatBox();
+}
+
+
+// ========================================================
+// BULLETPROOF ROBO CHAT POPUP CONTROLLER
+// ========================================================
+window.toggleRoboChat = function(e) {
+	if (e) {
+		e.preventDefault();
+		e.stopPropagation();
+	}
+	var popup = document.getElementById('robo-chat-popup');
+	var btn = document.getElementById('robo-mascot-btn');
+	var input = document.getElementById('robo-chat-input');
+	if (!popup) return;
+
+	var isActive = popup.classList.contains('active');
+	if (isActive) {
+		popup.classList.remove('active');
+		popup.setAttribute('aria-hidden', 'true');
+		if (btn) btn.setAttribute('aria-expanded', 'false');
+	} else {
+		popup.classList.add('active');
+		popup.setAttribute('aria-hidden', 'false');
+		if (btn) btn.setAttribute('aria-expanded', 'true');
+		if (input) {
+			setTimeout(function() { input.focus(); }, 120);
+		}
+	}
+};
+
+window.closeRoboChat = function(e) {
+	if (e) {
+		e.preventDefault();
+		e.stopPropagation();
+	}
+	var popup = document.getElementById('robo-chat-popup');
+	var btn = document.getElementById('robo-mascot-btn');
+	if (popup) {
+		popup.classList.remove('active');
+		popup.setAttribute('aria-hidden', 'true');
+	}
+	if (btn) btn.setAttribute('aria-expanded', 'false');
+};
+
+window.fillRoboChip = function(btn) {
+	var input = document.getElementById('robo-chat-input');
+	if (input && btn) {
+		input.value = btn.getAttribute('data-text') || btn.innerText.trim();
+		input.focus();
+	}
+};
+
+window.sendRoboSMS = function(e) {
+	if (e) e.preventDefault();
+	var input = document.getElementById('robo-chat-input');
+	var txt = (input && input.value.trim()) || "Hi RoboNex AI, I want to inquire about your robotics and AI learning classes. Please guide me.";
+	var toast = document.querySelector('.toast');
+	if (toast) {
+		toast.textContent = "Opening phone SMS app to text RoboNex (9931023041)... 🤖📱";
+		toast.classList.add('show');
+		setTimeout(function() { toast.classList.remove('show'); }, 3500);
+	}
+	window.location.href = "sms:+919931023041?body=" + encodeURIComponent(txt);
+};
+
+window.sendRoboWA = function(e) {
+	if (e) e.preventDefault();
+	var input = document.getElementById('robo-chat-input');
+	var txt = (input && input.value.trim()) || "Hi RoboNex AI, I want to inquire about your robotics and AI learning classes. Please guide me.";
+	var toast = document.querySelector('.toast');
+	if (toast) {
+		toast.textContent = "Connecting to WhatsApp (9931023041)... 💬";
+		toast.classList.add('show');
+		setTimeout(function() { toast.classList.remove('show'); }, 3500);
+	}
+	window.open("https://wa.me/919931023041?text=" + encodeURIComponent(txt), "_blank");
+};
+
+// Document-level close listeners
+document.addEventListener('click', function(e) {
+	var popup = document.getElementById('robo-chat-popup');
+	var btn = document.getElementById('robo-mascot-btn');
+	if (popup && popup.classList.contains('active')) {
+		if (!popup.contains(e.target) && (!btn || !btn.contains(e.target))) {
+			window.closeRoboChat();
+		}
+	}
+});
+
+document.addEventListener('keydown', function(e) {
+	if (e.key === 'Escape') {
+		window.closeRoboChat();
+	}
+});

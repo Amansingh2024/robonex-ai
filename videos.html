@@ -9,13 +9,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!-- Production PWA & Theme Meta -->
+  <meta name="theme-color" content="#0c1210" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="RoboNex AI" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Open Graph / Facebook Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RoboNex AI" />
+  <meta property="og:title" content="RoboNex AI | Hands-On AI &amp; Robotics Learning Lab" />
+  <meta property="og:description" content="Elite hands-on robotics, computer vision and AI learning lab for young creators aged 6–16. Real microcontrollers, 1:6 mentor ratio, tangible engineering." />
+  <meta property="og:image" content="logo-full.png" />
+
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RoboNex AI | Hands-On AI &amp; Robotics Learning Lab" />
+  <meta name="twitter:description" content="Hands-on robotics, computer vision, and AI lab for young creators aged 6–16. Visit our campus at Pillar 26, 90 Feet Road." />
+  <meta name="twitter:image" content="logo-full.png" />
+
 </head>
 <body class="inner-page video-page">
   <div class="grain"></div>
 
   <!-- Navigation -->
   <header class="nav wrap">
-    <a class="brand" href="home.html"><span class="brand-mark">R</span>robonex<span>ai</span></a>
+    <a class="brand" href="home.html" aria-label="RoboNex home">
+      <img src="logo.png" alt="RoboNex AI" class="brand-logo" />
+    </a>
     <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav>
       <a href="home.html">Home</a>
@@ -298,7 +322,9 @@
   <footer class="wrap home-footer">
     <div class="footer-top">
       <div>
-        <a class="brand" href="home.html"><span class="brand-mark">R</span>robonex<span>ai</span></a>
+        <a class="brand" href="home.html" aria-label="RoboNex home">
+          <img src="logo.png" alt="RoboNex AI" class="brand-logo footer-logo" />
+        </a>
         <p class="footer-tagline">Empowering the next generation of robotics and AI innovators through physical engineering.</p>
       </div>
       <div class="footer-links">
@@ -307,11 +333,122 @@
         <a href="projects.html">Projects</a>
         <a href="videos.html">3D Robots</a>
         <a href="lab.html">Our Lab</a>
-        <a href="tel:+917667617870">☎ 7667617870</a>
+        <a href="tel:+919931023041">☎ 9931023041</a>
+        <a href="https://wa.me/919931023041?text=Hi%20RoboNex%20AI%2C%20I%20want%20to%20inquire%20about%20the%203D%20robotics%20lab." target="_blank" rel="noopener noreferrer" class="footer-wa-link">
+          💬 WhatsApp: 9931023041
+        </a>
+        <a href="sms:+919931023041?body=Hi%20RoboNex%20AI%2C%20I%20am%20interested%20in%203D%20robotics%20classes." class="footer-sms-link">
+          ✉ Send Message
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Shanti+Kunj+Apartment,+Jai+Balaji+Enterprises+Gali,+Opposite+Jawed+Habib,+Pillar+No.+26,+90+Feet+Road"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="footer-map-link">
+          📍 Shanti Kunj Apt (Pillar 26, 90 Feet Rd)
+        </a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Floating WhatsApp & Message Connect Widget -->
+        <!-- Floating Robo AI SMS & WhatsApp Connect Widget -->
+  <aside class="floating-contact-widget" aria-label="Quick Connect Options">
+    <!-- Interactive Robo Chat / SMS Text Box Popup -->
+    <div class="robo-chat-popup" id="robo-chat-popup" aria-hidden="true">
+      <div class="robo-chat-header">
+        <div class="robo-chat-header-info">
+          <div class="robo-chat-avatar-mini">
+            <img src="robo-avatar.png" alt="Robo Assistant" />
+            <span class="mini-online-dot"></span>
+          </div>
+          <div>
+            <strong>RoboNex AI Assistant 🤖</strong>
+            <small>Direct SMS &amp; WhatsApp Query</small>
+          </div>
+        </div>
+        <button type="button" class="robo-chat-close-btn" id="robo-chat-close" onclick="closeRoboChat(event)" aria-label="Close Chat Window">✕</button>
+      </div>
+
+      <div class="robo-chat-body">
+        <div class="robo-msg-bubble">
+          <span>👋 <strong>Need help?</strong> Type your question below and click <em>Send as SMS</em> or <em>WhatsApp</em> to get an instant reply from our lab mentor!</span>
+        </div>
+
+        <div class="robo-quick-chips">
+          <button type="button" class="quick-chip-btn" onclick="fillRoboChip(this)" data-text="Hi RoboNex AI, I want to book a complimentary 45-min hands-on lab trial session for my child.">🎯 Book Free Trial</button>
+          <button type="button" class="quick-chip-btn" onclick="fillRoboChip(this)" data-text="Hi RoboNex AI, please send me the fee structure and batch timings for robotics classes.">📅 Fees &amp; Batches</button>
+          <button type="button" class="quick-chip-btn" onclick="fillRoboChip(this)" data-text="Hi RoboNex AI, I want directions to Shanti Kunj Apartment, Pillar 26 lab.">📍 Lab Location</button>
+        </div>
+
+        <div class="robo-input-container">
+          <textarea id="robo-chat-input" rows="3" placeholder="Type your message or question here... (e.g., Course details for age 10)"></textarea>
+        </div>
+
+        <div class="robo-chat-actions">
+          <button type="button" class="robo-action-btn robo-send-sms" id="robo-send-sms-btn" onclick="sendRoboSMS(event)" title="Open normal phone SMS with this message">
+            <span>✉ Send as SMS</span>
+          </button>
+          <button type="button" class="robo-action-btn robo-send-wa" id="robo-send-wa-btn" onclick="sendRoboWA(event)" title="Open WhatsApp with this message">
+            <span>💬 WhatsApp</span>
+          </button>
+        </div>
+
+        <div class="robo-chat-footer-note">
+          <span>Direct Mentor Hotline: <a href="tel:+919931023041">☎ 9931023041</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Robo Mascot Button (Opens the Text Box on Click) -->
+    <button type="button" class="floating-robo-sms-box" id="robo-mascot-btn" onclick="toggleRoboChat(event)" aria-expanded="false" aria-controls="robo-chat-popup" title="Click to open message text box">
+      <div class="robo-speech-bubble" onclick="toggleRoboChat(event)">
+        <span class="robo-bubble-title">Need help? 💬</span>
+        <span class="robo-bubble-sub">Click to type message ↗</span>
+      </div>
+      <div class="robo-avatar-wrap">
+        <div class="robo-radar-pulse"></div>
+        <img src="robo-avatar.png" alt="RoboNex AI Mascot Assistant" class="robo-avatar-img" />
+        <span class="robo-online-dot" title="Online AI Lab Assistant"></span>
+      </div>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919931023041?text=Hi%20RoboNex%20AI%2C%20I%20want%20to%20know%20more%20about%20your%20hands-on%20robotics%20%26%20AI%20learning%20lab." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-btn floating-wa-btn" 
+       title="Chat on WhatsApp">
+      <span class="floating-pulse"></span>
+      <svg class="wa-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.072-1.897-.449-1.614-.666-2.656-2.316-2.736-2.423-.08-.108-.649-.864-.649-1.648 0-.785.412-1.17.558-1.328.146-.159.32-.198.427-.198.106 0 .213.002.306.007.1.005.234-.038.366.28.136.327.465 1.135.507 1.219.042.083.07.18.013.291-.056.111-.085.18-.17.278-.085.099-.178.22-.254.296-.086.085-.175.177-.075.348.1.171.444.733.953 1.187.656.585 1.21.766 1.382.852.172.085.272.072.373-.045.101-.116.435-.507.55-.68.115-.175.232-.146.39-.088.158.058 1.002.472 1.174.558.172.085.287.128.329.2.042.072.042.417-.102.822z"/>
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.84.498 3.565 1.365 5.05L2.05 21.95l4.98-1.306C8.47 21.524 10.18 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.64 0-3.17-.48-4.46-1.31l-.32-.2-2.95.77.79-2.88-.21-.34C3.96 15.69 3.5 13.9 3.5 12c0-4.69 3.81-8.5 8.5-8.5s8.5 3.81 8.5 8.5-3.81 8.5-8.5 8.5z"/>
+      </svg>
+      <span class="floating-btn-label">WhatsApp</span>
+    </a>
+  </aside>
+
+  <script src="script.js?v=20261002b"></script>
+
+  <!-- Mobile Sticky Bottom Action Bar -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Quick Contacts">
+    <div class="mobile-bar-inner">
+      <a href="tel:+919931023041" class="mobile-bar-btn mobile-btn-call">
+        <span>☎</span> Call Lab
+      </a>
+      <a href="https://wa.me/919931023041?text=Hi%20RoboNex%20AI%2C%20I%20want%20to%20know%20more%20about%20your%20robotics%20classes." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="mobile-bar-btn mobile-btn-wa">
+        <span>💬</span> WhatsApp
+      </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Shanti+Kunj+Apartment,+Jai+Balaji+Enterprises+Gali,+Opposite+Jawed+Habib,+Pillar+No.+26,+90+Feet+Road" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="mobile-bar-btn mobile-btn-map">
+        <span>📍</span> Directions
+      </a>
+    </div>
+  </nav>
+
 </body>
 </html>
