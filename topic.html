@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20261003d" />
+  <link rel="stylesheet" href="style.css?v=20261003f" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="shortcut icon" href="favicon.ico" />
   <!-- Production PWA & Theme Meta -->
@@ -37,76 +37,7 @@
     <a class="brand" href="home.html" aria-label="RoboNex home">
       <img src="logo.png" alt="RoboNex AI" class="brand-logo" />
     </a>
-        <!-- Top Menu Trigger Button (Home & All Options) -->
-    <div class="top-nav-menu-container">
-      <button type="button" class="top-menu-btn" id="top-nav-menu-btn" onclick="toggleTopMenu(event)" aria-label="Navigation Menu" aria-expanded="false">
-        <span class="top-menu-icon">☰</span>
-        <span class="top-menu-label">Menu</span>
-      </button>
-
-      <!-- Dropdown Quick Menu Options -->
-      <div class="top-menu-dropdown" id="top-menu-dropdown" aria-hidden="true">
-        <div class="top-menu-header">
-          <span>NAVIGATION MENU</span>
-          <button type="button" class="top-menu-close" onclick="closeTopMenu(event)" aria-label="Close Menu">✕</button>
-        </div>
-        <div class="top-menu-links">
-          <a href="home.html" class="top-menu-item">
-            <span class="item-icon">🏠</span>
-            <div class="item-text">
-              <strong>Home</strong>
-              <small>Main Page &amp; Overview</small>
-            </div>
-          </a>
-          <a href="curriculum.html" class="top-menu-item">
-            <span class="item-icon">📚</span>
-            <div class="item-text">
-              <strong>Curriculum</strong>
-              <small>Ages 6–16 Maker Tracks</small>
-            </div>
-          </a>
-          <a href="projects.html" class="top-menu-item">
-            <span class="item-icon">🚀</span>
-            <div class="item-text">
-              <strong>Projects</strong>
-              <small>14 Working Hardware Prototypes</small>
-            </div>
-          </a>
-          <a href="videos.html" class="top-menu-item">
-            <span class="item-icon">🤖</span>
-            <div class="item-text">
-              <strong>3D Robots &amp; Videos</strong>
-              <small>Watch Real Hardware in Action</small>
-            </div>
-          </a>
-          <a href="lab.html" class="top-menu-item">
-            <span class="item-icon">🔬</span>
-            <div class="item-text">
-              <strong>Our Lab &amp; Campus</strong>
-              <small>Workstations &amp; Hardware Rigs</small>
-            </div>
-          </a>
-          <a href="home.html#location" class="top-menu-item">
-            <span class="item-icon">📍</span>
-            <div class="item-text">
-              <strong>Lab Location &amp; Directions</strong>
-              <small>Shanti Kunj Apt, Pillar No. 26</small>
-            </div>
-          </a>
-          <a href="home.html#contact" class="top-menu-item top-menu-highlight">
-            <span class="item-icon">🎯</span>
-            <div class="item-text">
-              <strong>Book Free 45-Min Trial</strong>
-              <small>Complimentary Hands-On Session ↗</small>
-            </div>
-          </a>
-        </div>
-        <div class="top-menu-footer">
-          <a href="tel:+919931023041" class="top-footer-btn call">☎ Call: 9931023041</a>
-          <a href="https://wa.me/919931023041?text=Hi%20RoboNex%20AI%2C%20I%20want%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener noreferrer" class="top-footer-btn wa">💬 WhatsApp</a>
-        </div>
-      </div>
-    </div>
+    <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav>
       <a href="home.html">Home</a>
       <a href="curriculum.html">Curriculum</a>
@@ -155,7 +86,12 @@
         </div>
         <h2 id="topic-panel-1-title">Precision hardware tools &amp; testbenches in this rig.</h2>
         <ul id="topic-learnings">
-          <!-- Populated dynamically via script.js?v=20261003d"topic-panel dark-topic industry-panel">
+          <!-- Populated dynamically via script.js -->
+        </ul>
+      </article>
+
+      <!-- Right: Real-World Industry Application -->
+      <article class="topic-panel dark-topic industry-panel">
         <div class="panel-header">
           <p class="eyebrow"><span></span> <span id="topic-panel-2-tag">USED IN THE REAL WORLD</span></p>
           <span class="panel-badge">INDUSTRY IMPACT</span>
@@ -304,7 +240,7 @@
     </a>
   </aside>
 
-  <script src="script.js?v=20261003d"></script>
+  <script src="script.js?v=20261003f"></script>
 
   <!-- Mobile Sticky Bottom Action Bar -->
   <nav class="mobile-bottom-bar" aria-label="Mobile Quick Contacts">

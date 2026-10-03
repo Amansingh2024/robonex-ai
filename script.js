@@ -1270,45 +1270,6 @@ document.addEventListener('keydown', function(e) {
 	}
 });
 
-// ========================================================
-// TOP NAVIGATION MENU TOGGLE HANDLER
-// ========================================================
-window.toggleTopMenu = function(e) {
-	if (e) {
-		e.preventDefault();
-		e.stopPropagation();
-	}
-	var dropdown = document.getElementById('top-menu-dropdown');
-	var btn = document.getElementById('top-nav-menu-btn');
-	if (!dropdown) return;
-	var isOpen = dropdown.classList.toggle('active');
-	dropdown.setAttribute('aria-hidden', String(!isOpen));
-	if (btn) btn.setAttribute('aria-expanded', String(isOpen));
-};
-
-window.closeTopMenu = function(e) {
-	if (e) {
-		e.preventDefault();
-		e.stopPropagation();
-	}
-	var dropdown = document.getElementById('top-menu-dropdown');
-	var btn = document.getElementById('top-nav-menu-btn');
-	if (dropdown) {
-		dropdown.classList.remove('active');
-		dropdown.setAttribute('aria-hidden', 'true');
-	}
-	if (btn) btn.setAttribute('aria-expanded', 'false');
-};
-
-document.addEventListener('click', function(e) {
-	var dropdown = document.getElementById('top-menu-dropdown');
-	var btn = document.getElementById('top-nav-menu-btn');
-	if (dropdown && dropdown.classList.contains('active')) {
-		if (!dropdown.contains(e.target) && (!btn || !btn.contains(e.target))) {
-			window.closeTopMenu();
-		}
-	}
-});
 
 // ========================================================
 // SLIDING ROBO MASCOT SCROLL TRACKER (1st Page -> Follows Scroll)
