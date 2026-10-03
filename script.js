@@ -1269,3 +1269,86 @@ document.addEventListener('keydown', function(e) {
 		window.closeRoboChat();
 	}
 });
+
+// ========================================================
+// TOP NAVIGATION MENU TOGGLE HANDLER
+// ========================================================
+window.toggleTopMenu = function(e) {
+	if (e) {
+		e.preventDefault();
+		e.stopPropagation();
+	}
+	var dropdown = document.getElementById('top-menu-dropdown');
+	var btn = document.getElementById('top-nav-menu-btn');
+	if (!dropdown) return;
+	var isOpen = dropdown.classList.toggle('active');
+	dropdown.setAttribute('aria-hidden', String(!isOpen));
+	if (btn) btn.setAttribute('aria-expanded', String(isOpen));
+};
+
+window.closeTopMenu = function(e) {
+	if (e) {
+		e.preventDefault();
+		e.stopPropagation();
+	}
+	var dropdown = document.getElementById('top-menu-dropdown');
+	var btn = document.getElementById('top-nav-menu-btn');
+	if (dropdown) {
+		dropdown.classList.remove('active');
+		dropdown.setAttribute('aria-hidden', 'true');
+	}
+	if (btn) btn.setAttribute('aria-expanded', 'false');
+};
+
+document.addEventListener('click', function(e) {
+	var dropdown = document.getElementById('top-menu-dropdown');
+	var btn = document.getElementById('top-nav-menu-btn');
+	if (dropdown && dropdown.classList.contains('active')) {
+		if (!dropdown.contains(e.target) && (!btn || !btn.contains(e.target))) {
+			window.closeTopMenu();
+		}
+	}
+});
+
+// ========================================================
+// SLIDING ROBO MASCOT SCROLL TRACKER (1st Page -> Follows Scroll)
+// ========================================================
+function updateRoboScrollTrack() {
+	var wrapper = document.getElementById('scrolling-robo-wrapper');
+	if (!wrapper) return;
+
+	var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+	var vh = window.innerHeight || 800;
+
+	// Over the first 1.5 screen heights, smoothly slide from top (1st page) toward bottom
+	var scrollRange = vh * 1.5;
+	var progress = Math.min(1, Math.max(0, scrollY / scrollRange));
+
+	var isMobile = window.innerWidth <= 768;
+	var startTop = isMobile ? 190 : 230; // 1st page position
+	var endTop = vh - (isMobile ? 150 : 130); // bottom position
+
+	var currentTop = startTop + (endTop - startTop) * progress;
+	wrapper.style.top = Math.round(currentTop) + 'px';
+
+	// Smart position for chat popup
+	var popup = document.getElementById('robo-chat-popup');
+	if (popup) {
+		if (currentTop > vh * 0.5) {
+			popup.style.bottom = '75px';
+			popup.style.top = 'auto';
+		} else {
+			popup.style.top = '75px';
+			popup.style.bottom = 'auto';
+		}
+	}
+}
+
+window.addEventListener('scroll', updateRoboScrollTrack, { passive: true });
+window.addEventListener('resize', updateRoboScrollTrack, { passive: true });
+
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', updateRoboScrollTrack);
+} else {
+	updateRoboScrollTrack();
+}
