@@ -852,7 +852,7 @@ function initGlitterEngine() {
 	];
 
 	// Ambient floating glitter particles
-	const PARTICLE_COUNT = Math.min(75, Math.floor((width * height) / 16000));
+	const PARTICLE_COUNT = Math.min(35, Math.floor((width * height) / 32000));
 	const particles = [];
 	const cursorParticles = [];
 
@@ -868,8 +868,8 @@ function initGlitterEngine() {
 			this.y = isCursor ? y : Math.random() * height;
 			this.size = isCursor ? Math.random() * 2.6 + 1.2 : Math.random() * 3.2 + 1.2;
 			this.colorPrefix = colors[Math.floor(Math.random() * colors.length)];
-			this.alpha = isCursor ? 1 : Math.random() * 0.7 + 0.2;
-			this.maxAlpha = Math.random() * 0.5 + 0.5;
+			this.alpha = isCursor ? 0.45 : Math.random() * 0.22 + 0.05;
+			this.maxAlpha = Math.random() * 0.25 + 0.12;
 			this.phase = Math.random() * Math.PI * 2;
 			this.twinkleSpeed = Math.random() * 0.035 + 0.015;
 			this.vx = isCursor ? (Math.random() - 0.5) * 3.2 : (Math.random() - 0.5) * 0.35;
@@ -925,7 +925,7 @@ function initGlitterEngine() {
 
 				c.fillStyle = this.colorPrefix + this.alpha + ')';
 				c.shadowColor = this.colorPrefix + '0.9)';
-				c.shadowBlur = s * 3.5;
+				c.shadowBlur = s * 1.2;
 				c.fill();
 			} else if (this.shape === 'flare') {
 				// Optical cross sparkle (+)

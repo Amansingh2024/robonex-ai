@@ -63,7 +63,7 @@ textarea {
   }
 
   .inner-hero h1 {
-    letter-spacing: -4px;
+    letter-spacing: -0.5px;
     overflow-wrap: anywhere;
   }
 
@@ -1105,7 +1105,7 @@ textarea {
 
 .tree-root-line strong {
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.25 ;
 }
 
 .tree-divider {
@@ -1775,8 +1775,8 @@ textarea {
 
 .query-modal-card h2 {
   font-size: clamp(38px, 6vw, 54px);
-  line-height: 0.95;
-  letter-spacing: -3px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
   margin: 0;
 }
 
@@ -1875,8 +1875,8 @@ textarea {
 
 .query-modal-card h2 {
   font-size: clamp(38px, 6vw, 54px);
-  line-height: 0.95;
-  letter-spacing: -3px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
   margin: 0;
 }
 
@@ -1902,7 +1902,7 @@ textarea {
   background: #fff8;
   color: var(--ink);
   font-size: 24px;
-  line-height: 1;
+  line-height: 1.25 ;
   cursor: pointer;
   transition:
     transform 0.2s,
@@ -2198,8 +2198,8 @@ textarea {
   }
 
   .home-summary h1 {
-    line-height: 1;
-    letter-spacing: -3px;
+    line-height: 1.25 ;
+    letter-spacing: -0.5px;
   }
 
   .typewriter-line {
@@ -2801,8 +2801,8 @@ textarea {
 
 .home-summary h1 {
   font-size: clamp(50px, 6.4vw, 94px);
-  line-height: 0.94;
-  letter-spacing: -6px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
   margin: 0;
 }
 
@@ -2940,7 +2940,7 @@ textarea {
 
 .home-intro h2 {
   font-size: clamp(38px, 4.6vw, 62px);
-  letter-spacing: -4px;
+  letter-spacing: -0.5px;
 }
 
 .home-intro>p {
@@ -3001,8 +3001,8 @@ textarea {
 
 .home-pillar h3 {
   font-size: 27px;
-  line-height: 1;
-  letter-spacing: -1.5px;
+  line-height: 1.25 ;
+  letter-spacing: -0.5px;
   margin: 14px 0;
 }
 
@@ -3036,7 +3036,7 @@ textarea {
 
 .home-contact h2 {
   font-size: clamp(38px, 4vw, 58px);
-  letter-spacing: -4px;
+  letter-spacing: -0.5px;
   margin: 0;
 }
 
@@ -3102,7 +3102,7 @@ textarea {
 
   .home-summary h1 {
     font-size: clamp(46px, 14vw, 72px);
-    letter-spacing: -4px;
+    letter-spacing: -0.5px;
   }
 
   .home-lead {
@@ -3329,8 +3329,8 @@ textarea {
 
 .topic-copy h1 {
   font-size: clamp(48px, 6vw, 84px);
-  line-height: 0.94;
-  letter-spacing: -5px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
   margin: 0;
 }
 
@@ -3389,8 +3389,8 @@ textarea {
 
 .topic-panel h2 {
   font-size: 32px;
-  letter-spacing: -2px;
-  line-height: 1;
+  letter-spacing: -0.5px;
+  line-height: 1.25 ;
   margin: 0 0 25px;
 }
 
@@ -3675,7 +3675,7 @@ textarea {
 
 .hero-full .hero-copy h1 {
   font-size: clamp(54px, 7vw, 104px);
-  letter-spacing: -6px;
+  letter-spacing: -0.5px;
 }
 
 .hero-full .hero-copy .intro {
@@ -3807,7 +3807,7 @@ textarea {
 
   .hero-full .hero-copy h1 {
     font-size: clamp(48px, 16vw, 72px);
-    letter-spacing: -4px;
+    letter-spacing: -0.5px;
   }
 
   .hero-full .hero-visual {
@@ -3880,7 +3880,7 @@ textarea {
 
 .hero-full .hero-copy h1 {
   font-size: clamp(54px, 7vw, 104px);
-  letter-spacing: -6px;
+  letter-spacing: -0.5px;
 }
 
 .hero-full .hero-copy .intro {
@@ -4144,7 +4144,7 @@ textarea {
 
 .subheading {
   font-size: 31px;
-  letter-spacing: -2px;
+  letter-spacing: -0.5px;
   margin: 0 0 22px;
 }
 
@@ -4243,8 +4243,8 @@ body {
   gap: 12px;
   text-decoration: none;
   font-weight: 800;
-  letter-spacing: -1.5px;
-  line-height: 1;
+  letter-spacing: -0.5px;
+  line-height: 1.25 ;
 }
 
 .brand-logo {
@@ -4355,8 +4355,8 @@ body {
 .hero h1,
 h2 {
   font-size: clamp(44px, 5.5vw, 76px);
-  line-height: 0.99;
-  letter-spacing: -4.8px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
   margin: 0;
   font-weight: 800;
 }
@@ -4595,14 +4595,14 @@ em {
 
 .level-icon {
   font-size: 66px;
-  line-height: 1;
+  line-height: 1.25 ;
   margin: 55px 0 20px;
 }
 
 .level-card h3 {
   font-size: 33px;
-  letter-spacing: -2px;
-  line-height: 1;
+  letter-spacing: -0.5px;
+  line-height: 1.25 ;
   margin: 0;
 }
 
@@ -4712,7 +4712,7 @@ em {
 
 .project-overlay h3 {
   font-size: 25px;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.5px;
   margin: 0;
 }
 
@@ -4879,7 +4879,7 @@ footer p {
 
 .skills-glass h3 {
   font-size: 24px;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.5px;
   margin: 0;
 }
 
@@ -4932,8 +4932,8 @@ footer p {
 
 .inner-hero h1 {
   font-size: clamp(54px, 8vw, 108px);
-  line-height: 0.9;
-  letter-spacing: -7px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
   margin: 0;
 }
 
@@ -5035,8 +5035,8 @@ footer p {
 
 .tree-card h2 {
   font-size: 21px;
-  line-height: 1;
-  letter-spacing: -1.3px;
+  line-height: 1.25 ;
+  letter-spacing: -0.5px;
   margin: 0 0 15px;
 }
 
@@ -5134,7 +5134,7 @@ footer p {
 
 .all-projects h2 {
   font-size: 24px;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.5px;
   margin: 5px 0;
 }
 
@@ -5453,7 +5453,7 @@ footer p {
     font-size: clamp(28px, 9vw, 44px) !important;
     line-height: 1.02 !important;
     margin-bottom: 5px !important;
-    letter-spacing: -2px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .home-summary .eyebrow {
@@ -5812,7 +5812,7 @@ footer p {
 
 .tree-card h2 {
   font-size: clamp(24px, 3vw, 32px) !important;
-  letter-spacing: -1.2px !important;
+  letter-spacing: -0.5px !important;
   color: #fff !important;
   margin: 0 0 16px !important;
   font-weight: 800 !important;
@@ -6167,7 +6167,7 @@ footer p {
 
 .home-intro h2 {
   color: #fff !important;
-  letter-spacing: -2.5px !important;
+  letter-spacing: -0.5px !important;
 }
 
 .home-intro h2 em {
@@ -6266,7 +6266,7 @@ footer p {
 .home-pillar h3 {
   font-size: 26px !important;
   line-height: 1.05 !important;
-  letter-spacing: -1.2px !important;
+  letter-spacing: -0.5px !important;
   margin: 12px 0 !important;
   color: #fff !important;
   font-weight: 800 !important;
@@ -6345,7 +6345,7 @@ footer p {
 
 .contact-title {
   color: #fff !important;
-  letter-spacing: -2.5px !important;
+  letter-spacing: -0.5px !important;
 }
 
 .contact-title em {
@@ -6475,7 +6475,7 @@ footer p {
 
   .home-intro h2 {
     font-size: 30px !important;
-    letter-spacing: -1.5px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .home-pillars {
@@ -6835,7 +6835,7 @@ b.tool-logo {
 .method-header h2 {
   font-size: clamp(36px, 4.4vw, 56px) !important;
   line-height: 1.05 !important;
-  letter-spacing: -2px !important;
+  letter-spacing: -0.5px !important;
   color: #fff !important;
   margin: 12px 0 16px !important;
 }
@@ -6964,7 +6964,7 @@ b.tool-logo {
 .pillars-header h2 {
   font-size: clamp(36px, 4.4vw, 54px) !important;
   line-height: 1.05 !important;
-  letter-spacing: -2px !important;
+  letter-spacing: -0.5px !important;
   color: #fff !important;
   margin: 12px 0 0 !important;
 }
@@ -7041,7 +7041,7 @@ b.tool-logo {
 .home-pillar-card h3 {
   font-size: clamp(24px, 2.8vw, 32px) !important;
   font-weight: 800 !important;
-  letter-spacing: -1.2px !important;
+  letter-spacing: -0.5px !important;
   color: #fff !important;
   margin: 0 0 12px !important;
 }
@@ -7094,7 +7094,7 @@ b.tool-logo {
 .inventions-header h2 {
   font-size: clamp(34px, 4.2vw, 52px) !important;
   line-height: 1.05 !important;
-  letter-spacing: -2px !important;
+  letter-spacing: -0.5px !important;
   color: #fff !important;
   margin: 12px 0 0 !important;
 }
@@ -7278,7 +7278,7 @@ b.tool-logo {
 .advantages-header h2 {
   font-size: clamp(34px, 4.2vw, 52px) !important;
   line-height: 1.05 !important;
-  letter-spacing: -2px !important;
+  letter-spacing: -0.5px !important;
   color: #fff !important;
   margin: 12px 0 0 !important;
 }
@@ -7401,7 +7401,7 @@ b.tool-logo {
   color: #fff !important;
   font-size: clamp(38px, 4.4vw, 56px) !important;
   line-height: 1.05 !important;
-  letter-spacing: -2.5px !important;
+  letter-spacing: -0.5px !important;
   margin: 0 0 16px !important;
 }
 
@@ -8165,7 +8165,7 @@ b.tool-logo {
 .arena-header h2 {
   font-size: clamp(36px, 4.5vw, 56px) !important;
   line-height: 1.05 !important;
-  letter-spacing: -2.5px !important;
+  letter-spacing: -0.5px !important;
   color: #fff !important;
   margin: 12px 0 14px !important;
 }
@@ -8321,7 +8321,7 @@ b.tool-logo {
 .age-header h2 {
   font-size: clamp(34px, 4.2vw, 52px) !important;
   line-height: 1.05 !important;
-  letter-spacing: -2px !important;
+  letter-spacing: -0.5px !important;
   color: #fff !important;
   margin: 12px 0 0 !important;
 }
@@ -8580,7 +8580,7 @@ b.tool-logo {
   font-size: clamp(32px, 3.8vw, 48px) !important;
   color: #fff !important;
   line-height: 1.1 !important;
-  letter-spacing: -2px !important;
+  letter-spacing: -0.5px !important;
   margin: 10px 0 12px !important;
 }
 
@@ -8622,7 +8622,7 @@ b.tool-logo {
 .gallery-header h2 {
   font-size: clamp(34px, 4.2vw, 52px) !important;
   line-height: 1.05 !important;
-  letter-spacing: -2px !important;
+  letter-spacing: -0.5px !important;
   color: #fff !important;
   margin: 12px 0 0 !important;
 }
@@ -8727,7 +8727,7 @@ b.tool-logo {
   font-size: clamp(30px, 3.5vw, 44px) !important;
   color: #fff !important;
   margin: 10px 0 32px !important;
-  letter-spacing: -1.5px !important;
+  letter-spacing: -0.5px !important;
 }
 
 .safety-grid {
@@ -9127,8 +9127,8 @@ b.tool-logo {
   width: 100vw !important;
   height: 100vh !important;
   pointer-events: none !important;
-  z-index: 2 !important;
-  opacity: 0.95 !important;
+  z-index: 0 !important; /* Strictly UNDER all content */
+  opacity: 0.28 !important; /* Low light ambient stardust - soft and soothing */
   mix-blend-mode: screen !important;
 }
 
@@ -9760,7 +9760,7 @@ b.tool-logo {
 
   .home-summary h1 {
     font-size: clamp(36px, 10vw, 52px) !important;
-    letter-spacing: -3px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .home-lead {
@@ -9891,7 +9891,7 @@ b.tool-logo {
 
   .arena-header h2 {
     font-size: 30px !important;
-    letter-spacing: -1.5px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .arena-subtitle {
@@ -9931,7 +9931,7 @@ b.tool-logo {
 
   .age-header h2 {
     font-size: 28px !important;
-    letter-spacing: -1.5px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .age-card {
@@ -9987,7 +9987,7 @@ b.tool-logo {
 
   .method-header h2 {
     font-size: 28px !important;
-    letter-spacing: -1.5px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .method-header .method-subtitle {
@@ -10026,7 +10026,7 @@ b.tool-logo {
 
   .pillars-header h2 {
     font-size: 28px !important;
-    letter-spacing: -1.5px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .home-pillars-grid {
@@ -10059,7 +10059,7 @@ b.tool-logo {
 
   .inventions-header h2 {
     font-size: 28px !important;
-    letter-spacing: -1.5px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .inventions-grid {
@@ -10086,7 +10086,7 @@ b.tool-logo {
 
   .advantages-header h2 {
     font-size: 28px !important;
-    letter-spacing: -1.5px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .advantages-grid {
@@ -10118,7 +10118,7 @@ b.tool-logo {
 
   .contact-title {
     font-size: 32px !important;
-    letter-spacing: -2px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .contact-description {
@@ -10196,7 +10196,7 @@ b.tool-logo {
 
   .inner-hero h1 {
     font-size: clamp(32px, 9vw, 48px) !important;
-    letter-spacing: -2.5px !important;
+    letter-spacing: -0.5px !important;
     overflow-wrap: break-word !important;
   }
 
@@ -10247,7 +10247,7 @@ b.tool-logo {
 
   .video-cta-copy h2 {
     font-size: 26px !important;
-    letter-spacing: -1.5px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .video-cta-copy p {
@@ -10454,7 +10454,7 @@ b.tool-logo {
 @media (max-width: 480px) {
   .home-summary h1 {
     font-size: clamp(32px, 9vw, 44px) !important;
-    letter-spacing: -2.5px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .home-summary {
@@ -10517,7 +10517,7 @@ b.tool-logo {
 
   .inner-hero h1 {
     font-size: clamp(28px, 8.5vw, 42px) !important;
-    letter-spacing: -2px !important;
+    letter-spacing: -0.5px !important;
   }
 }
 
@@ -10629,7 +10629,7 @@ b.tool-logo {
 .location-heading {
   font-size: clamp(26px, 3vw, 36px);
   color: #fff;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.5px;
   margin: 8px 0 12px;
   line-height: 1.15;
 }
@@ -11325,7 +11325,7 @@ b.tool-logo {
 .age-finder-intro h2 {
   font-size: clamp(28px, 3.4vw, 42px);
   color: #fff;
-  letter-spacing: -2px;
+  letter-spacing: -0.5px;
   margin: 8px 0 12px;
   line-height: 1.15;
 }
@@ -12406,4 +12406,144 @@ b.tool-logo {
   cursor: pointer !important;
   user-select: none;
   -webkit-user-select: none;
+}
+
+
+/* ==========================================================================
+   PRODUCTION ISO & RESPONSIVE TYPOGRAPHY OVERLAP PREVENTER (ALL DEVICES)
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Ensure all page content is strictly above the glitter canvas */
+header,
+main,
+footer,
+section,
+article,
+nav,
+.wrap,
+.home-nav,
+.home-hero,
+.home-hero-inner,
+.home-summary,
+.home-advantages-section,
+.age-finder-section,
+.hardware-kit-section,
+.cohort-brochure-section,
+.social-proof-section,
+.lab-location-section,
+.home-footer,
+.floating-contact-widget,
+.mobile-bottom-bar,
+.toast {
+  position: relative;
+  z-index: 2;
+}
+
+/* Global Heading Breathing Room & Word Collision Prevention */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25 !important;
+  letter-spacing: -0.015em !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  hyphens: manual;
+}
+
+/* Hero Title & Subheading Anti-Overlap */
+.home-summary h1 {
+  font-size: clamp(34px, 5.2vw, 76px) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.015em !important;
+  margin: 12px 0 16px !important;
+  overflow: visible !important;
+}
+
+.home-summary h1 span,
+.home-summary h1 em {
+  display: inline-block;
+  line-height: 1.2 !important;
+  letter-spacing: -0.015em !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+}
+
+.hero-word-hover {
+  display: inline-block;
+  white-space: normal !important;
+}
+
+/* Truth statements stacked cleanly without horizontal collision */
+.hero-truth {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  margin: 16px 0 20px !important;
+  max-width: 100% !important;
+}
+
+.hero-truth span {
+  display: block !important;
+  line-height: 1.5 !important;
+  font-size: 13.5px !important;
+  color: #cfd8d2 !important;
+  white-space: normal !important;
+  letter-spacing: 0.2px !important;
+}
+
+/* Typewriter line adjustments to prevent cutoff or overlapping */
+.typewriter-line {
+  clip-path: none !important;
+  border-right: none !important;
+  animation: none !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+  display: inline !important;
+}
+
+.home-summary .home-lead {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  color: #c5cec8 !important;
+  max-width: 540px !important;
+  margin-bottom: 22px !important;
+  letter-spacing: 0.1px !important;
+}
+
+/* Mobile ISO Breakpoints (320px - 768px) */
+@media (max-width: 768px) {
+  .home-summary h1 {
+    font-size: clamp(28px, 8.5vw, 46px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .home-summary h1 br {
+    display: block !important;
+  }
+
+  .hero-truth span {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  .home-summary .home-lead {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  .inner-hero h1 {
+    font-size: clamp(30px, 9vw, 52px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .advantages-header h2,
+  .age-finder-intro h2,
+  .contact-title {
+    font-size: clamp(24px, 7vw, 36px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em !important;
+  }
 }
