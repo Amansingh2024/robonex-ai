@@ -1313,3 +1313,21 @@ if (document.readyState === 'loading') {
 } else {
 	updateRoboScrollTrack();
 }
+
+// ========================================================
+// PARENTS FAQ ACCORDION HANDLER (Smooth Single-Open Behavior)
+// ========================================================
+document.addEventListener('DOMContentLoaded', function() {
+	var faqItems = document.querySelectorAll('.faq-accordion-container .faq-item');
+	faqItems.forEach(function(item) {
+		item.addEventListener('toggle', function() {
+			if (item.open) {
+				faqItems.forEach(function(other) {
+					if (other !== item && other.open) {
+						other.open = false;
+					}
+				});
+			}
+		});
+	});
+});
