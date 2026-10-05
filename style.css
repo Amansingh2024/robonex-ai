@@ -14168,103 +14168,68 @@ h3 em {
    HERO ROBOT VIDEO: FULL-SIZE CINEMATIC HERO & RIGHT-ALIGNED SUMMARY BOX
    ========================================================= */
 
+/* =========================================================
+   HERO ROBOT VIDEO: BIG PROMINENT 16:9 VIDEO & ZERO OVERLAP
+   ========================================================= */
+
 .home-page .home-hero,
 .home-hero {
   min-height: auto !important;
+  height: auto !important;
   position: relative !important;
-  overflow: hidden !important;
+  overflow: visible !important;
+  background: transparent !important;
+  width: 100% !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  padding: 20px clamp(16px, 3.5vw, 44px) 16px !important;
+  box-sizing: border-box !important;
 }
 
-/* Desktop & Laptop Screens */
-@media (min-width: 820px) {
+/* Desktop & Laptop Screens (>= 900px): Clean 2-Column Split (Zero Overlap) */
+@media (min-width: 900px) {
   .home-page .home-hero,
   .home-hero {
-    min-height: clamp(560px, 56.25vw, 820px) !important;
-    height: clamp(560px, 56.25vw, 820px) !important;
-    max-height: calc(100vh - 75px) !important;
-    position: relative !important;
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    overflow: hidden !important;
-    background: #080e0c !important;
+    justify-content: space-between !important;
+    gap: clamp(24px, 3.5vw, 48px) !important;
+    min-height: clamp(520px, 48vw, 680px) !important;
   }
 
-  .home-page .home-hero-media,
-  .home-hero-media {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow: hidden !important;
-    z-index: 1 !important;
-    background: #080e0c !important;
-  }
-
-  /* Full uncropped 16:9 robot video reaching down close to WHAT WE DO */
-  .home-page .home-hero-video,
-  .home-hero-video,
-  .home-page .home-hero-media video,
-  .home-hero-media video {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    object-position: 20% center !important;
-    filter: contrast(1.1) brightness(1.04) saturate(1.16) !important;
-    z-index: 1 !important;
-    transform: none !important;
-    mask-image: none !important;
-    -webkit-mask-image: none !important;
-    background: #080e0c !important;
-  }
-
-  /* Gentle gradient on right side so text is readable while full robot is bright & uncropped */
-  .home-page .home-hero-media::after,
-  .home-page .home-hero-media:after,
-  .home-hero-media::after,
-  .home-hero-media:after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    background: linear-gradient(90deg, transparent 0%, transparent 40%, rgba(8, 14, 12, 0.65) 70%, rgba(8, 14, 12, 0.94) 100%),
-                linear-gradient(0deg, rgba(8, 14, 12, 0.45) 0%, transparent 10%, transparent 92%, rgba(8, 14, 12, 0.3) 100%) !important;
-    z-index: 2 !important;
-    pointer-events: none !important;
-  }
-
+  /* Left Column: Dedicated Text Card (Order 1, Zero Overlap) */
   .home-page .home-hero-inner,
   .home-hero-inner {
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-    position: relative !important;
-    z-index: 3 !important;
+    order: 1 !important;
+    flex: 1 1 42% !important;
+    max-width: 530px !important;
     width: 100% !important;
-    padding-right: clamp(20px, 5vw, 60px) !important;
-    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
     min-height: auto !important;
+    height: auto !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
 
   .home-page .home-summary,
   .home-summary {
-    margin-left: auto !important;
-    margin-right: 0 !important;
-    max-width: 460px !important;
-    width: min(460px, 94%) !important;
-    padding: 28px 24px !important;
-    border-radius: 20px !important;
-    background: rgba(12, 18, 16, 0.88) !important;
-    border: 1px solid rgba(255, 255, 255, 0.18) !important;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 245, 160, 0.14) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: clamp(24px, 2.8vw, 36px) clamp(20px, 2.4vw, 32px) !important;
+    box-sizing: border-box !important;
+    border-radius: 22px !important;
+    background: rgba(12, 18, 16, 0.94) !important;
+    border: 1.5px solid rgba(255, 157, 0, 0.35) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 157, 0, 0.12) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
   }
 
   .home-summary h1 {
-    font-size: clamp(28px, 3.4vw, 42px) !important;
+    font-size: clamp(26px, 3vw, 40px) !important;
     line-height: 1.15 !important;
     margin: 8px 0 12px !important;
   }
@@ -14281,49 +14246,99 @@ h3 em {
   }
 
   .hero-truth span {
-    font-size: 10px !important;
+    font-size: 10.5px !important;
     line-height: 1.4 !important;
   }
 
   .home-summary .home-lead {
-    font-size: 12.5px !important;
+    font-size: 13px !important;
     line-height: 1.55 !important;
     margin: 12px 0 18px !important;
-    max-width: 440px !important;
     color: #cfdcd5 !important;
   }
 
   .home-summary .home-actions {
-    gap: 10px !important;
+    gap: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
   }
 
   .home-summary .home-actions .button {
-    padding: 10px 18px !important;
-    font-size: 12.5px !important;
-    min-height: 40px !important;
+    padding: 11px 20px !important;
+    font-size: 13px !important;
+    min-height: 42px !important;
   }
 
   .home-summary .home-phone {
-    font-size: 12px !important;
-    padding: 8px 12px !important;
+    font-size: 12.5px !important;
+    padding: 9px 14px !important;
+  }
+
+  /* Right Column: BARA (BIG) ROBOT VIDEO STAGE (Order 2, ZERO OVERLAP) */
+  .home-page .home-hero-media,
+  .home-hero-media {
+    order: 2 !important;
+    position: relative !important; /* NOT absolute - zero overlap! */
+    flex: 1 1 58% !important;
+    width: 100% !important;
+    max-width: 840px !important;
+    aspect-ratio: 16 / 9 !important;
+    height: clamp(390px, 38vw, 560px) !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #080e0c !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(0, 245, 160, 0.28) !important;
+    border: 2px solid rgba(0, 245, 160, 0.45) !important;
+    margin: 0 !important;
+  }
+
+  /* Full uncropped robot video inside dedicated large stage */
+  .home-page .home-hero-video,
+  .home-hero-video,
+  .home-page .home-hero-media video,
+  .home-hero-media video {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    filter: contrast(1.1) brightness(1.04) saturate(1.16) !important;
+    background: #080e0c !important;
+    transform: none !important;
+  }
+
+  /* Remove all dark overlays so video is 100% bright, crisp & clear */
+  .home-page .home-hero-media::after,
+  .home-page .home-hero-media:after,
+  .home-hero-media::after,
+  .home-hero-media:after,
+  .home-video-overlay,
+  .home-glow {
+    display: none !important;
+    opacity: 0 !important;
   }
 }
 
-/* Mobile & Tablet Screens (All iOS, Android, and Tablets) */
-@media (max-width: 819px) {
+/* Mobile & Tablet Screens (< 900px): Clean Stacked Layout (Zero Overlap) */
+@media (max-width: 899px) {
   .home-page .home-hero,
   .home-hero {
     min-height: auto !important;
     height: auto !important;
-    padding: 14px 0 10px !important;
+    padding: 14px 16px 10px !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 16px !important;
+    gap: 18px !important;
     overflow: visible !important;
     background: transparent !important;
   }
 
-  /* Summary Card first so headline and buttons are visible first */
+  /* Item 1: Summary Card on Top */
   .home-page .home-hero-inner,
   .home-hero-inner {
     order: 1 !important;
@@ -14337,7 +14352,7 @@ h3 em {
   .home-summary {
     width: 100% !important;
     margin: 0 auto !important;
-    padding: 24px 20px !important;
+    padding: 22px 18px !important;
     box-sizing: border-box !important;
     background: rgba(14, 20, 18, 0.94) !important;
     border: 1.5px solid rgba(255, 157, 0, 0.35) !important;
@@ -14348,9 +14363,9 @@ h3 em {
   }
 
   .home-summary h1 {
-    font-size: clamp(26px, 6.8vw, 36px) !important;
+    font-size: clamp(24px, 6.5vw, 34px) !important;
     line-height: 1.2 !important;
-    margin: 6px 0 12px !important;
+    margin: 6px 0 10px !important;
   }
 
   .home-summary .eyebrow {
@@ -14371,10 +14386,10 @@ h3 em {
   .home-summary .home-lead {
     font-size: 13.5px !important;
     line-height: 1.55 !important;
-    margin: 12px 0 18px !important;
+    margin: 12px 0 16px !important;
   }
 
-  /* Video container: placed order: 2, right above WHAT WE DO */
+  /* Item 2: BARA (BIG) 16:9 ROBOT VIDEO (Order 2, ZERO OVERLAP) */
   .home-page .home-hero-media,
   .home-hero-media {
     order: 2 !important;
@@ -14382,19 +14397,18 @@ h3 em {
     width: 100% !important;
     aspect-ratio: 16 / 9 !important;
     height: auto !important;
-    min-height: 200px !important;
-    border-radius: 18px !important;
+    min-height: 240px !important;
+    border-radius: 20px !important;
     overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     background: #080e0c !important;
-    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.75), 0 0 35px rgba(0, 245, 160, 0.25) !important;
-    border: 1.5px solid rgba(0, 245, 160, 0.4) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 245, 160, 0.3) !important;
+    border: 2px solid rgba(0, 245, 160, 0.45) !important;
     margin-bottom: 0 !important;
   }
 
-  /* Remove all dark overlays on mobile so video is 100% bright and clear */
   .home-page .home-hero-media::after,
   .home-page .home-hero-media:after,
   .home-hero-media::after,
@@ -14422,7 +14436,7 @@ h3 em {
   }
 
   .what-we-do-section {
-    margin-top: 20px !important;
+    margin-top: 25px !important;
     padding: 30px 0 35px !important;
   }
 }
