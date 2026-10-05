@@ -1330,4 +1330,95 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 	});
+
+	// Video Spotlight Interactive Tab Switcher
+	var spotlightBtns = document.querySelectorAll('.spotlight-tab-btn');
+	var spotlightIframe = document.getElementById('main-spotlight-iframe');
+	var badge1 = document.getElementById('spotlight-badge-1');
+	var badge2 = document.getElementById('spotlight-badge-2');
+
+	if (spotlightBtns.length > 0 && spotlightIframe) {
+		spotlightBtns.forEach(function(btn) {
+			btn.addEventListener('click', function() {
+				spotlightBtns.forEach(function(b) { b.classList.remove('active'); });
+				btn.classList.add('active');
+
+				var vid = btn.getAttribute('data-video-id');
+				if (vid) {
+					spotlightIframe.src = 'https://www.youtube-nocookie.com/embed/' + vid + '?rel=0&modestbranding=1&autoplay=1';
+				}
+				if (badge1 && btn.getAttribute('data-badge1')) {
+					badge1.textContent = btn.getAttribute('data-badge1');
+				}
+				if (badge2 && btn.getAttribute('data-badge2')) {
+					badge2.textContent = btn.getAttribute('data-badge2');
+				}
+			});
+		});
+	}
+
+	// ========================================================
+	// 3D FLIP CARD INTERACTIVE CLICK & RETURN HANDLER (UNIVERSAL)
+	// ========================================================
+	document.addEventListener('click', function(e) {
+		var flipCard = e.target.closest('.flip-card');
+		if (!flipCard) return;
+
+		// If clicked on an interactive link inside the card, allow navigation without flipping
+		if (e.target.closest('a')) return;
+
+		// If clicked on the flip-back return button
+		if (e.target.closest('.btn-flip-return')) {
+			e.stopPropagation();
+			flipCard.classList.remove('is-flipped');
+			return;
+		}
+
+		// Toggle 3D flip
+		flipCard.classList.toggle('is-flipped');
+	});
+
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Enter' || e.key === ' ') {
+			var activeEl = document.activeElement;
+			var flipCard = activeEl ? activeEl.closest('.flip-card') : null;
+			if (flipCard && !activeEl.closest('a') && !activeEl.closest('button')) {
+				e.preventDefault();
+				flipCard.classList.toggle('is-flipped');
+			}
+		}
+	});
+
+	// ========================================================
+	// TECHNOLOGY ECOSYSTEM (HOW WE DO THIS) TAB INTERACTIVITY
+	// ========================================================
+	document.addEventListener('click', function(e) {
+		var ecoTab = e.target.closest('.eco-icon-tab');
+		if (!ecoTab) return;
+
+		var allTabs = document.querySelectorAll('.eco-icon-tab');
+		allTabs.forEach(function(t) {
+			t.classList.remove('active');
+			t.setAttribute('aria-selected', 'false');
+		});
+		ecoTab.classList.add('active');
+		ecoTab.setAttribute('aria-selected', 'true');
+
+		var targetId = ecoTab.getAttribute('data-eco-target');
+		if (targetId) {
+			var targetCard = document.getElementById(targetId);
+			if (targetCard) {
+				document.querySelectorAll('.eco-card').forEach(function(c) {
+					c.classList.remove('eco-highlight');
+				});
+				targetCard.classList.add('eco-highlight');
+				targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+				setTimeout(function() {
+					targetCard.classList.remove('eco-highlight');
+				}, 2200);
+			}
+		}
+	});
 });
+
+

@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20261003g" />
+  <link rel="stylesheet" href="style.css?v=20261006prod" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="shortcut icon" href="favicon.ico" />
   <!-- Production PWA & Theme Meta -->
@@ -104,50 +104,522 @@
     <!-- Modern 3D Hero Section -->
     <section class="home-hero">
       <div class="home-hero-media">
-        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1800&q=90"
-          alt="Modern humanoid robot in high-tech technology laboratory" />
+        <video class="home-hero-video" autoplay loop muted playsinline poster="hero-robot-poster.jpg">
+          <source src="robot-hero-bg.webm" type="video/webm" />
+          <source src="https://upload.wikimedia.org/wikipedia/commons/7/75/CGI_Robot_3D_Animation.webm" type="video/webm" />
+        </video>
+        <div class="home-video-overlay"></div>
         <div class="home-glow"></div>
-        <span class="home-orbit home-orbit-one"></span>
-        <span class="home-orbit home-orbit-two"></span>
-        <span class="home-scan-line"></span>
-        <span class="home-sensor home-sensor-one">DEPTH / 96%</span>
-        <span class="home-sensor home-sensor-two">MOTOR / READY</span>
-        <span class="home-sensor home-sensor-three">VISION / 60 FPS</span>
       </div>
 
       <div class="wrap home-hero-inner">
         <div class="home-summary tilt-surface" data-tilt>
-          <p class="eyebrow typewriter-line typewriter-line-1 glitter-shimmer"><span></span> AI + ROBOTICS / HANDS-ON
-            LEARNING LAB</p>
+          <p class="eyebrow typewriter-line typewriter-line-1 glitter-shimmer"><span></span> AI + ROBOTICS / HANDS-ON LEARNING LAB</p>
           <h1>
             <span class="typewriter-line typewriter-line-2 hero-word-hover">Build the future.</span><br />
             <em class="typewriter-line typewriter-line-3 hero-word-hover">One curious mind at a time.</em>
           </h1>
           <div class="hero-truth">
             <span class="typewriter-line typewriter-line-4 hero-word-hover">Real skills begin with a real build.</span>
-            <span class="typewriter-line typewriter-line-5 hero-word-hover">Students learn by testing, breaking and
-              improving.</span>
+            <span class="typewriter-line typewriter-line-5 hero-word-hover">Students learn by testing, breaking and improving.</span>
             <span class="typewriter-line typewriter-line-6 hero-word-hover">Code gives the machine a brain.</span>
-            <span class="typewriter-line typewriter-line-7 hero-word-hover">Curiosity turns ideas into working
-              robots.</span>
+            <span class="typewriter-line typewriter-line-7 hero-word-hover">Curiosity turns ideas into working robots.</span>
           </div>
           <p class="home-lead typewriter-line typewriter-line-8 hero-copy-hover">
-            RoboNex AI empowers young creators aged 6–16 to design, wire, code and control intelligent machines through
-            real hardware kits, computer vision, and industry-grade engineering thinking.
+            RoboNex AI empowers young creators aged 6–16 to design, wire, code and control intelligent machines through real hardware kits, computer vision, and industry-grade engineering thinking.
           </p>
           <div class="home-actions">
-            <a class="button typewriter-line typewriter-line-9 curriculum-cta" href="curriculum.html">Explore Curriculum
-              <b>→</b></a>
+            <a class="button typewriter-line typewriter-line-9 curriculum-cta" href="curriculum.html">Explore Curriculum <b>→</b></a>
             <a class="home-phone typewriter-line typewriter-line-10 phone-cta" href="tel:+919931023041">☎ 9931023041</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="home-live-tag tilt-surface" data-tilt><b>●</b> ROBOT VISION ONLINE</div>
-        <div class="home-project-note tilt-surface" data-tilt>
-          <small>NEXT LAB BUILD</small>
-          <strong>Vision-Guided<br />Sorting Bot</strong>
-          <span>Camera + Python + Servos ↗</span>
+    <!-- WHAT WE DO Showcase Section (Directly Below Robot Video) -->
+    <section class="what-we-do-section wrap" id="what-we-do">
+      <div class="what-we-do-header">
+        <span class="what-we-do-pill"><span></span> OUR CORE MISSION</span>
+        <h2 class="what-we-do-title">WHAT WE DO</h2>
+        <p class="what-we-do-subtitle">Preparing Students for a Rapidly Changing Technological &amp; AI World</p>
+      </div>
+
+      <div class="what-we-do-grid">
+        <!-- Card 1 -->
+        <article class="what-card flip-card" id="what-card-1" tabindex="0" role="button" aria-label="Innovation & 21st Century Skills. Click to flip for methodology.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="what-card-text">
+                <span class="what-card-tag">01 / CREATIVE STEM</span>
+                <h3>Innovation &amp; 21st Century Skills</h3>
+                <p>Empowering kids to become creative thinkers, analytical problem solvers, and patent-ready young inventors.</p>
+              </div>
+              <div class="what-card-media">
+                <img src="what-we-do-1.jpg" alt="Students building smart autonomous rover in robotics lab" loading="lazy" />
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for methodology</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">METHODOLOGY • STAGE 01</span>
+                <span class="back-tag">21ST CENTURY</span>
+              </div>
+              <h4>Computational Thinking &amp; Invention</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🧠 FIRST-PRINCIPLES REASONING</strong>
+                  <span>Deconstruct mechanical challenges into structured algorithms and decision logic.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🤝 PEER COLLABORATION</strong>
+                  <span>Small 6-student cohorts working together in teams to brainstorm, debug, and build.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>💡 ORIGINAL INVENTIONS</strong>
+                  <span>Moving beyond following kit manuals to designing original rovers and mechanisms.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 COMPETITION ROADMAP</strong>
+                  <span>Training for international Olympiads, WRO, FIRST LEGO League, and STEM symposiums.</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html" class="btn-flip-cta">Explore Programs →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="what-card flip-card" id="what-card-2" tabindex="0" role="button" aria-label="Integrated Robotics & AI Lab Solutions. Click to flip for lab specs.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="what-card-text">
+                <span class="what-card-tag">02 / AUTHENTIC HARDWARE</span>
+                <h3>Integrated Robotics &amp; AI Lab</h3>
+                <p>End-to-end hands-on laboratory environment with real microcontrollers, drone flight electronics, and mechatronics.</p>
+              </div>
+              <div class="what-card-media">
+                <img src="what-we-do-2.jpg" alt="Students testing drone flight electronics and robotic arm" loading="lazy" />
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for lab specs</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">LAB DEPOT • STAGE 02</span>
+                <span class="back-tag">AUTHENTIC SILICON</span>
+              </div>
+              <h4>Silicon, Sensors &amp; Mechatronics</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🔬 INDUSTRY-GRADE RIGS</strong>
+                  <span>Direct hands-on with Arduino Uno, Mega, ESP32 dual-core Wi-Fi/BLE and bench power supplies.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🦾 ROBOTIC KINEMATICS</strong>
+                  <span>Servo PWM calibration, DC gearmotors, steppers, and multi-DOF articulated robot arms.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🛸 FLIGHT &amp; SENSOR TEST RIGS</strong>
+                  <span>Quadcopter gyroscopic IMU stabilization, ultrasonic sonar, and telemetry links.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🖨️ 3D CAD FABRICATION</strong>
+                  <span>Autodesk Fusion 360 parametric sketches with direct-drive 3D print farm.</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="lab.html" class="btn-flip-cta">Inspect Lab Rigs →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="what-card flip-card" id="what-card-3" tabindex="0" role="button" aria-label="Practical Real-World Learning. Click to flip for curriculum.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="what-card-text">
+                <span class="what-card-tag">03 / PRACTICAL LEARNING</span>
+                <h3>Practical Real-World Learning</h3>
+                <p>Hands-on experience with cutting-edge Python 3, OpenCV neural vision, IoT telemetry, and autonomous systems.</p>
+              </div>
+              <div class="what-card-media">
+                <img src="what-we-do-3.jpg" alt="Students coding Python computer vision on laptops" loading="lazy" />
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for curriculum</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">FIELD APPS • STAGE 03</span>
+                <span class="back-tag">EDGE AI &amp; CODE</span>
+              </div>
+              <h4>Modern Software &amp; Edge Vision</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🐍 INDUSTRY CODE FLOW</strong>
+                  <span>Python 3, C/C++ firmware, object-oriented robot motor classes, and Git workflows.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>👁️ REAL-TIME OPENCV 4</strong>
+                  <span>Live camera frame analysis, HSV color masking, contour tracking, and object detection.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>☁️ LIVE IOT TELEMETRY</strong>
+                  <span>Mosquitto MQTT brokers, WebSockets, and cloud dashboard telemetry with live gauges.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🚀 VERIFIED WORKING MACHINE</strong>
+                  <span>Every student builds, codes, and demonstrates an autonomous machine before graduation.</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html" class="btn-flip-cta">Full Curriculum →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOW WE DO THIS: Technology Ecosystem Section -->
+    <section class="how-we-do-section wrap" id="how-we-do">
+      <div class="how-we-do-header">
+        <span class="how-we-do-pill"><span></span> TECHNOLOGY ECOSYSTEM</span>
+        <h2 class="how-we-do-title">HOW WE DO THIS</h2>
+        <div class="how-we-do-divider">
+          <span class="dot-line left"></span>
+          <span class="dot dot-1"></span>
+          <span class="dot dot-2"></span>
+          <span class="dot dot-3"></span>
+          <span class="dot-line right"></span>
         </div>
+        <p class="how-we-do-subtitle">Our comprehensive technology ecosystem bridging conceptual STEM to industry-grade mechatronics and AI</p>
+      </div>
+
+      <!-- 6 Interactive Technology Category Capsules -->
+      <div class="eco-icons-bar" role="tablist" aria-label="Technology Categories">
+        <button class="eco-icon-tab active" data-eco-target="eco-card-coding" type="button" role="tab" aria-selected="true" title="Coding Platform">
+          <span class="tab-icon-wrap icon-coding">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="url(#codeGrad)" stroke-width="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21" stroke="#00f5a0"></line>
+              <line x1="12" y1="17" x2="12" y2="21" stroke="#00f5a0"></line>
+              <polyline points="7 8 10 10 7 12" stroke="#ffb800"></polyline>
+              <line x1="12" y1="12" x2="15" y2="12" stroke="#00f5a0"></line>
+              <defs>
+                <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00f5a0"/>
+                  <stop offset="100%" stop-color="#00b4d8"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="tab-label">CODING</span>
+        </button>
+
+        <button class="eco-icon-tab" data-eco-target="eco-card-robotics" type="button" role="tab" aria-selected="false" title="Robotics Hardware">
+          <span class="tab-icon-wrap icon-robotics">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="10" rx="2" stroke="url(#roboGrad)" stroke-width="2"></rect>
+              <circle cx="12" cy="5" r="2" stroke="#ff9d00"></circle>
+              <path d="M12 7v4" stroke="#ff9d00"></path>
+              <line x1="8" y1="15" x2="8.01" y2="15" stroke="#fff" stroke-width="3"></line>
+              <line x1="16" y1="15" x2="16.01" y2="15" stroke="#fff" stroke-width="3"></line>
+              <path d="M9 18h6" stroke="#ff9d00"></path>
+              <defs>
+                <linearGradient id="roboGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff9d00"/>
+                  <stop offset="100%" stop-color="#ff3d71"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="tab-label">ROBOTICS</span>
+        </button>
+
+        <button class="eco-icon-tab" data-eco-target="eco-card-robotics" type="button" role="tab" aria-selected="false" title="STEM Discovery">
+          <span class="tab-icon-wrap icon-stem">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 18h8" stroke="#ffb800"></path>
+              <path d="M3 22h18" stroke="#00f5a0"></path>
+              <path d="M14 22a7 7 0 1 0-7-7v7" stroke="url(#stemGrad)" stroke-width="2"></path>
+              <path d="M9 14h2" stroke="#00f5a0"></path>
+              <path d="M9 12a2 2 0 1 1-4 0V5a2 2 0 1 1 4 0v7z" stroke="url(#stemGrad)" stroke-width="2"></path>
+              <path d="M12 7l3 3" stroke="#ffb800"></path>
+              <defs>
+                <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffb800"/>
+                  <stop offset="100%" stop-color="#00f5a0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="tab-label">STEM</span>
+        </button>
+
+        <button class="eco-icon-tab" data-eco-target="eco-card-robotics" type="button" role="tab" aria-selected="false" title="IoT Smart Devices">
+          <span class="tab-icon-wrap icon-iot">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0" stroke="url(#iotGrad)" stroke-width="2"></path>
+              <path d="M1.42 9a16 16 0 0 1 21.16 0" stroke="url(#iotGrad)" stroke-width="2"></path>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0" stroke="#00f5a0" stroke-width="2"></path>
+              <circle cx="12" cy="20" r="1.5" fill="#00f5a0" stroke="#00f5a0"></circle>
+              <defs>
+                <linearGradient id="iotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00b4d8"/>
+                  <stop offset="100%" stop-color="#00f5a0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="tab-label">IOT</span>
+        </button>
+
+        <button class="eco-icon-tab" data-eco-target="eco-card-vr" type="button" role="tab" aria-selected="false" title="AR & VR Simulations">
+          <span class="tab-icon-wrap icon-arvr">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7h18a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-4l-3-3-3 3H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z" stroke="url(#vrGrad)" stroke-width="2"></path>
+              <circle cx="7.5" cy="12" r="2.5" stroke="#00e5ff" stroke-width="1.8"></circle>
+              <circle cx="16.5" cy="12" r="2.5" stroke="#00e5ff" stroke-width="1.8"></circle>
+              <defs>
+                <linearGradient id="vrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00e5ff"/>
+                  <stop offset="100%" stop-color="#a855f7"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="tab-label">AR &amp; VR</span>
+        </button>
+
+        <button class="eco-icon-tab" data-eco-target="eco-card-ailab" type="button" role="tab" aria-selected="false" title="AI & Machine Learning">
+          <span class="tab-icon-wrap icon-aiml">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z" stroke="url(#aiGrad)" stroke-width="1.8"></path>
+              <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z" stroke="url(#aiGrad)" stroke-width="1.8"></path>
+              <defs>
+                <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff007f"/>
+                  <stop offset="100%" stop-color="#ff9d00"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="tab-label">AI &amp; ML</span>
+        </button>
+      </div>
+
+      <!-- 4 Ecosystem Cards Grid with 3D Flip Back Gesture -->
+      <div class="eco-cards-grid">
+        <!-- Card 1: Coding Platform -->
+        <article class="eco-card flip-card" id="eco-card-coding" tabindex="0" role="button" aria-label="Coding Platform: Interactive learning. Click to flip for platform specifications.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="eco-card-media">
+                <img src="eco-coding.jpg" alt="Student programming mechatronics PID loop on coding platform" loading="lazy" />
+                <span class="eco-badge">01 • DEV ENVIRONMENT</span>
+              </div>
+              <div class="eco-card-body">
+                <div class="eco-card-titles">
+                  <h3 class="eco-title">Coding Platform</h3>
+                  <p class="eco-subtitle">Interactive learning</p>
+                </div>
+                <div class="card-flip-prompt">
+                  <span>👆 Click to flip for specs</span><i class="flip-icon">↻</i>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">PLATFORM ARCHITECTURE</span>
+                <span class="back-tag">BROWSER IDE</span>
+              </div>
+              <h4>Robonex Interactive Code Studio</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>💻 BLOCK-TO-PYTHON DUAL ENGINE</strong>
+                  <span>Drag-and-drop visual logic converts dynamically to production Python 3 &amp; C++ code.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>⚡ HARDWARE WEBSERIAL COMM</strong>
+                  <span>Flash firmware to microcontrollers right from Chrome with 0 driver installations.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>📈 LIVE SENSOR TELEMETRY</strong>
+                  <span>Stream gyro, ultrasonic, and infrared readings into real-time interactive charts.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🤖 AI ERROR ASSISTANT</strong>
+                  <span>Context-aware AI tutor explains syntax errors in friendly kid-friendly language.</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html" class="btn-flip-cta">Try Demo IDE →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Robotics Kits -->
+        <article class="eco-card flip-card" id="eco-card-robotics" tabindex="0" role="button" aria-label="Robotics Kits: Hands-on robotics education. Click to flip for kit hardware specs.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="eco-card-media">
+                <img src="eco-robotics.jpg" alt="Mecanum 4WD autonomous smart rover robotics kit" loading="lazy" />
+                <span class="eco-badge">02 • HARDWARE KITS</span>
+              </div>
+              <div class="eco-card-body">
+                <div class="eco-card-titles">
+                  <h3 class="eco-title">Robotics Kits</h3>
+                  <p class="eco-subtitle">Hands-on robotics education</p>
+                </div>
+                <div class="card-flip-prompt">
+                  <span>👆 Click to flip for specs</span><i class="flip-icon">↻</i>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">HARDWARE MECHATRONICS</span>
+                <span class="back-tag">GRADE 1–12</span>
+              </div>
+              <h4>Autonomous Mecanum Rover &amp; Kits</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>⚙️ 360° MECANUM VECTOR DRIVES</strong>
+                  <span>Four independent encoder motors allow holonomic lateral and diagonal drift motion.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧠 DUAL MCU CONTROLLER</strong>
+                  <span>ESP32 Wi-Fi/Bluetooth core paired with ATmega328P for high-speed PWM motor control.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>📡 MULTI-SENSOR PAYLOAD</strong>
+                  <span>Obstacle LiDAR, 5-channel line tracking, ultrasonic radar, and RGB status ring.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🔋 INDUSTRIAL 18650 POWER PACK</strong>
+                  <span>Integrated BMS charging module with short-circuit protection and 4+ hours of run-time.</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html" class="btn-flip-cta">Kit Specs →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: AI Labs -->
+        <article class="eco-card flip-card" id="eco-card-ailab" tabindex="0" role="button" aria-label="AI Labs: Artificial Intelligence curriculum. Click to flip for lab infrastructure.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="eco-card-media">
+                <img src="eco-ailab.jpg" alt="State of the art school AI and robotics innovation lab" loading="lazy" />
+                <span class="eco-badge">03 • INNOVATION LAB</span>
+              </div>
+              <div class="eco-card-body">
+                <div class="eco-card-titles">
+                  <h3 class="eco-title">AI Labs</h3>
+                  <p class="eco-subtitle">Artificial Intelligence curriculum</p>
+                </div>
+                <div class="card-flip-prompt">
+                  <span>👆 Click to flip for specs</span><i class="flip-icon">↻</i>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">INSTITUTIONAL SETUP</span>
+                <span class="back-tag">TURNKEY LAB</span>
+              </div>
+              <h4>Next-Gen AI &amp; STEM Lab Infrastructure</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🏫 TURNKEY SCHOOL INSTALLATION</strong>
+                  <span>Ergonomic maker workbenches, anti-static flooring, power rails, and modular storage.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏎️ OLYMPIAD COMPETITION ARENAS</strong>
+                  <span>Regulation line follower grids, maze solving tracks, and obstacle challenge zones.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🖨️ RAPID PROTOTYPING SUITE</strong>
+                  <span>Precision 3D printers, laser engraver bays, and soldering rework fume extractors.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>📜 FACULTY EMPOWERMENT</strong>
+                  <span>Complete curriculum manuals, train-the-trainer workshops, and lesson slide decks.</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="contact.html" class="btn-flip-cta">Set Up a Lab →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: VR Learning -->
+        <article class="eco-card flip-card" id="eco-card-vr" tabindex="0" role="button" aria-label="VR Learning: Immersive educational experiences. Click to flip for VR simulation details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="eco-card-media">
+                <img src="eco-vr.jpg" alt="Student wearing VR headset exploring robotic digital twins" loading="lazy" />
+                <span class="eco-badge">04 • SPATIAL SIMULATION</span>
+              </div>
+              <div class="eco-card-body">
+                <div class="eco-card-titles">
+                  <h3 class="eco-title">VR Learning</h3>
+                  <p class="eco-subtitle">Immersive educational experiences</p>
+                </div>
+                <div class="card-flip-prompt">
+                  <span>👆 Click to flip for specs</span><i class="flip-icon">↻</i>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">SPATIAL COMPUTING</span>
+                <span class="back-tag">DIGITAL TWIN</span>
+              </div>
+              <h4>Immersive 3D Spatial Simulator</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🥽 ZERO-RISK VIRTUAL PROTOTYPING</strong>
+                  <span>Test high-voltage circuits and high-speed drone motors inside physics simulation first.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧩 EXPLODED-VIEW MECHATRONICS</strong>
+                  <span>Disassemble gear trains, planetary drives, and robotic arms in 3D 1:1 scale space.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🌐 VIRTUAL MARS ROVER MISSION</strong>
+                  <span>Teleoperate virtual rovers across simulated extraterrestrial terrain with live code.</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🎯 CROSS-DEVICE WEBXR</strong>
+                  <span>Runs seamlessly across Meta Quest, iPad tablets, Chromebooks, and PC browsers.</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html" class="btn-flip-cta">Launch VR Demo →</a>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -193,117 +665,217 @@
 
       <div class="arena-grid">
         <!-- Card 1 -->
-        <article class="arena-card tilt-surface" data-tilt>
-          <div class="arena-media">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=85"
-              alt="High-speed computer vision and AI camera system" />
-            <span class="arena-live-tag">● 60 FPS SPATIAL VISION</span>
-          </div>
-          <div class="arena-body">
-            <span class="arena-discipline">01 / COMPUTER VISION &amp; NEURAL AI</span>
-            <h3>Spatial AI &amp; Real-Time Perception</h3>
-            <p>
-              Teaching computers to see and interpret the physical world. Students train OpenCV visual models to track
-              optical contours, measure pixel velocities, segment objects by color, and command robotic pan-tilt turrets
-              to track moving targets in under 15 milliseconds.
-            </p>
-            <div class="arena-takeaway">
-              <strong>Engineering Realization:</strong>
-              <span>Students understand that artificial intelligence isn't magic—it's linear algebra, matrix transforms,
-                and real-time camera sensor arrays.</span>
+        <article class="arena-card flip-card" id="arena-card-1" tabindex="0" role="button" aria-label="Spatial AI & Real-Time Perception Card. Click to flip for technical specifications.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="arena-media">
+                <img src="robot-humanoid.jpg" alt="High-speed computer vision and AI camera system" loading="lazy" />
+                <span class="arena-live-tag">● 60 FPS SPATIAL VISION</span>
+              </div>
+              <div class="arena-body">
+                <span class="arena-discipline">01 / COMPUTER VISION &amp; NEURAL AI</span>
+                <h3>Spatial AI &amp; Perception</h3>
+                <p>Students train OpenCV models to track optical contours, measure pixel velocities, and command robotic pan-tilt turrets.</p>
+                <div class="arena-tags">
+                  <span class="tech-badge"><b class="tech-badge-logo">Py</b>Python 3.11</span>
+                  <span class="tech-badge"><b class="tech-badge-logo">CV</b>OpenCV</span>
+                  <span class="tech-badge"><b class="tech-badge-logo">AI</b>YOLOv8</span>
+                </div>
+                <div class="card-flip-prompt">
+                  <span>🔄 Click to view specs</span><i>→</i>
+                </div>
+              </div>
             </div>
-            <div class="arena-tags">
-              <span class="tech-badge"><b class="tech-badge-logo">Py</b>Python 3.11</span>
-              <span class="tech-badge"><b class="tech-badge-logo">CV</b>OpenCV Engine</span>
-              <span class="tech-badge"><b class="tech-badge-logo">AI</b>YOLOv8 Models</span>
-              <span class="tech-badge"><b class="tech-badge-logo">◉</b>Depth Cameras</span>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">SYSTEM SCHEMATICS &amp; TECH STACK</span>
+                <span class="back-tag">CORE SPEC</span>
+              </div>
+              <h4>Spatial Vision Neural Architecture</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>📷 OPTICS &amp; SENSORS</strong>
+                  <span>1080p 60FPS Low-Distortion Wide-Angle Sensor + Dual Depth Camera Array</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧠 NEURAL INFERENCE</strong>
+                  <span>Custom YOLOv8-Nano (12ms latency), HSV Contour Tracking, Optical Flow</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>💻 CODE &amp; ALGORITHMS</strong>
+                  <span>Python 3.11, Matrix Homography, 3D Affine Transforms &amp; Edge TPU Acceleration</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 LAB BUILD OUTCOME</strong>
+                  <span>Autonomous Pan-Tilt Turret tracking high-speed targets in under 15ms</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html#ai" class="btn-flip-cta">Explore Curriculum →</a>
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Card 2 -->
-        <article class="arena-card tilt-surface" data-tilt>
-          <div class="arena-media">
-            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1000&q=85"
-              alt="Autonomous mobile robot chassis in testing lab" />
-            <span class="arena-live-tag">● CLOSED-LOOP PID MOTORING</span>
-          </div>
-          <div class="arena-body">
-            <span class="arena-discipline">02 / MECHATRONICS &amp; AUTONOMY</span>
-            <h3>Closed-Loop Kinematics &amp; Motion</h3>
-            <p>
-              Giving digital code physical mechanical leverage. Students program dual-channel H-bridge drivers,
-              calibrate optical wheel encoders, implement Proportional-Integral-Derivative (PID) closed loops, and
-              balance inverted pendulum rovers over uneven obstacle tracks.
-            </p>
-            <div class="arena-takeaway">
-              <strong>Engineering Realization:</strong>
-              <span>Students learn how sensors and math combine to keep mobile robots moving straight, negotiating sharp
-                curves, and avoiding collisions.</span>
+        <article class="arena-card flip-card" id="arena-card-2" tabindex="0" role="button" aria-label="Closed-Loop Kinematics & Motion Card. Click to flip for technical specifications.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="arena-media">
+                <img src="robot-rover.jpg" alt="Autonomous mobile robot chassis in testing lab" loading="lazy" />
+                <span class="arena-live-tag">● CLOSED-LOOP PID MOTORING</span>
+              </div>
+              <div class="arena-body">
+                <span class="arena-discipline">02 / MECHATRONICS &amp; AUTONOMY</span>
+                <h3>Kinematics &amp; Motion Control</h3>
+                <p>Programming dual H-bridge drivers, optical wheel encoders, and PID control loops for inverted balance rovers.</p>
+                <div class="arena-tags">
+                  <span class="tech-badge"><b class="tech-badge-logo">▣</b>Arduino Mega</span>
+                  <span class="tech-badge"><b class="tech-badge-logo">↻</b>High-Torque DC</span>
+                  <span class="tech-badge"><b class="tech-badge-logo">⚡</b>PID Loop</span>
+                </div>
+                <div class="card-flip-prompt">
+                  <span>🔄 Click to view specs</span><i>→</i>
+                </div>
+              </div>
             </div>
-            <div class="arena-tags">
-              <span class="tech-badge"><b class="tech-badge-logo">▣</b>Arduino Mega</span>
-              <span class="tech-badge"><b class="tech-badge-logo">↻</b>High-Torque DC</span>
-              <span class="tech-badge"><b class="tech-badge-logo">⚡</b>H-Bridge Driver</span>
-              <span class="tech-badge"><b class="tech-badge-logo">◈</b>Ultrasonic Sonar</span>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">MOTOR CONTROLS &amp; DYNAMICS</span>
+                <span class="back-tag">CORE SPEC</span>
+              </div>
+              <h4>Autonomous Mechatronics Architecture</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>⚡ DRIVE ACTUATION</strong>
+                  <span>Dual 12V 300 RPM Metal Gearmotors + L298N Dual H-Bridge PWM Drivers</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>📐 CONTROL MATHEMATICS</strong>
+                  <span>Closed-Loop PID Tuning (Kp, Ki, Kd), Odometry Wheel-Tick Trajectory</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧭 SENSORY FEEDBACK</strong>
+                  <span>Optical Quadrature Encoders + MPU6050 6-Axis Gyro/Accelerometer IMU</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 LAB BUILD OUTCOME</strong>
+                  <span>Two-Wheel Inverted Self-Balancing Robot &amp; High-Speed Obstacle Rover</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html#robotics" class="btn-flip-cta">Explore Robotics →</a>
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Card 3 -->
-        <article class="arena-card tilt-surface" data-tilt>
-          <div class="arena-media">
-            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=85"
-              alt="IoT sensor breadboard and cloud telemetry dashboard" />
-            <span class="arena-live-tag">● LOW-LATENCY MQTT TELEMETRY</span>
-          </div>
-          <div class="arena-body">
-            <span class="arena-discipline">03 / DISTRIBUTED IOT &amp; NETWORKS</span>
-            <h3>Connected IoT Telemetry &amp; Cloud Nodes</h3>
-            <p>
-              Connecting hardware to the global web. Students configure dual-core ESP32 microcontrollers with Wi-Fi and
-              Bluetooth mesh, transmit telemetry via lightweight MQTT brokers, and design responsive web dashboards to
-              monitor remote soil sensors and smart relays.
-            </p>
-            <div class="arena-takeaway">
-              <strong>Engineering Realization:</strong>
-              <span>Students build real industrial SCADA prototypes, understanding network packets, cloud APIs, and
-                distributed wireless automation.</span>
+        <article class="arena-card flip-card" id="arena-card-3" tabindex="0" role="button" aria-label="Connected IoT Telemetry Card. Click to flip for technical specifications.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="arena-media">
+                <img src="robot-iot-station.jpg" alt="IoT sensor breadboard and cloud telemetry dashboard" loading="lazy" />
+                <span class="arena-live-tag">● LOW-LATENCY MQTT TELEMETRY</span>
+              </div>
+              <div class="arena-body">
+                <span class="arena-discipline">03 / DISTRIBUTED IOT &amp; NETWORKS</span>
+                <h3>Connected IoT Telemetry</h3>
+                <p>Configuring dual-core ESP32 chips with Wi-Fi mesh, transmitting telemetry via MQTT, and designing live cloud dashboards.</p>
+                <div class="arena-tags">
+                  <span class="tech-badge"><b class="tech-badge-logo">⌁</b>MQTT Broker</span>
+                  <span class="tech-badge"><b class="tech-badge-logo">☁</b>Cloud Telemetry</span>
+                  <span class="tech-badge"><b class="tech-badge-logo">▣</b>ESP32 Wi-Fi</span>
+                </div>
+                <div class="card-flip-prompt">
+                  <span>🔄 Click to view specs</span><i>→</i>
+                </div>
+              </div>
             </div>
-            <div class="arena-tags">
-              <span class="tech-badge"><b class="tech-badge-logo">⌁</b>MQTT Broker</span>
-              <span class="tech-badge"><b class="tech-badge-logo">☁</b>Cloud Telemetry</span>
-              <span class="tech-badge"><b class="tech-badge-logo">▣</b>ESP32 Wi-Fi</span>
-              <span class="tech-badge"><b class="tech-badge-logo">⌬</b>Solid-State Relay</span>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">NETWORK TOPOLOGY &amp; TELEMETRY</span>
+                <span class="back-tag">CORE SPEC</span>
+              </div>
+              <h4>Distributed IoT Edge Architecture</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>📡 WIRELESS PROTOCOLS</strong>
+                  <span>Wi-Fi 802.11 b/g/n, ESP-NOW Zero-Lag Mesh &amp; BLE 5.0 Peripheral Beaconing</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>☁️ CLOUD &amp; DATA BROKER</strong>
+                  <span>Mosquitto MQTT Pub/Sub with TLS Encryption &amp; Live WebSocket Gauges</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🎛️ SENSORS &amp; ACTUATION</strong>
+                  <span>Capacitive Soil Sensor, DHT22 Probe &amp; 10A Optocoupled Solid State Relay</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 LAB BUILD OUTCOME</strong>
+                  <span>Autonomous Smart Irrigation Node with WhatsApp/Telegram Alerts</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html#iot" class="btn-flip-cta">Explore IoT Track →</a>
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Card 4 -->
-        <article class="arena-card tilt-surface" data-tilt>
-          <div class="arena-media">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=85"
-              alt="3D printer filament rapid mechanical prototyping" />
-            <span class="arena-live-tag">● 0.12MM ADDITIVE ACCURACY</span>
-          </div>
-          <div class="arena-body">
-            <span class="arena-discipline">04 / CAD ENGINEERING &amp; 3D PRINTING</span>
-            <h3>Parametric CAD &amp; Additive Fabrication</h3>
-            <p>
-              From digital 3D model to physical machine part. Students learn parametric mechanical modeling in Fusion
-              360, calculate gear ratios, tolerances, and structural load factors, then manufacture physical chassis and
-              custom gripper end-effectors on 3D printers.
-            </p>
-            <div class="arena-takeaway">
-              <strong>Engineering Realization:</strong>
-              <span>Students discover that good software requires great mechanical design. A robot must be physically
-                sound to perform in the real world.</span>
+        <article class="arena-card flip-card" id="arena-card-4" tabindex="0" role="button" aria-label="Parametric CAD & Additive Fabrication Card. Click to flip for technical specifications.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="arena-media">
+                <img src="robot-arm-vision.jpg" alt="Robotic arm mechanical CAD and vision test" loading="lazy" />
+                <span class="arena-live-tag">● 0.12MM ADDITIVE ACCURACY</span>
+              </div>
+              <div class="arena-body">
+                <span class="arena-discipline">04 / CAD ENGINEERING &amp; 3D PRINTING</span>
+                <h3>Parametric CAD &amp; Fabrication</h3>
+                <p>Mechanical modeling in Fusion 360, calculating gear ratios and tolerances, then fabricating custom robot chassis on 3D printers.</p>
+                <div class="arena-tags">
+                  <span class="tech-badge"><b class="tech-badge-logo">3D</b>Fusion 360</span>
+                  <span class="tech-badge"><b class="tech-badge-logo">✦</b>3D Printing</span>
+                  <span class="tech-badge"><b class="tech-badge-logo">⚙</b>Planetary Gears</span>
+                </div>
+                <div class="card-flip-prompt">
+                  <span>🔄 Click to view specs</span><i>→</i>
+                </div>
+              </div>
             </div>
-            <div class="arena-tags">
-              <span class="tech-badge"><b class="tech-badge-logo">3D</b>Fusion 360 CAD</span>
-              <span class="tech-badge"><b class="tech-badge-logo">✦</b>3D Print Slicing</span>
-              <span class="tech-badge"><b class="tech-badge-logo">⚙</b>Planetary Gears</span>
-              <span class="tech-badge"><b class="tech-badge-logo">⬡</b>Tolerance Fits</span>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">DIGITAL TWIN &amp; MANUFACTURING</span>
+                <span class="back-tag">CORE SPEC</span>
+              </div>
+              <h4>Precision Mechanical Engineering</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>📐 CAD &amp; FEA MODELING</strong>
+                  <span>Autodesk Fusion 360 Parametric Constraints, Stress Analysis &amp; Slicing</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>⚙️ TRANSMISSION SYSTEM</strong>
+                  <span>Involute Spur &amp; Planetary Reduction Gears (3.5:1 ratio) with Bearings</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🖨️ RAPID FABRICATION</strong>
+                  <span>0.12mm Layer Height, Carbon-Fiber PLA/PETG &amp; Heat-Set Brass Thread Inserts</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 LAB BUILD OUTCOME</strong>
+                  <span>High-Torque 4-Axis Articulated Pick &amp; Place Robotic Arm with Parallel Jaw</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html#mechanical" class="btn-flip-cta">Explore CAD Track →</a>
+              </div>
             </div>
           </div>
         </article>
@@ -318,43 +890,151 @@
       </div>
 
       <div class="age-grid">
-        <div class="age-card tilt-surface" data-tilt>
-          <span class="age-badge">AGES 6–8</span>
-          <h3>Junior Explorers</h3>
-          <p class="age-subtitle">Visual Logic &amp; First Physical Circuits</p>
-          <p>Children discover how machines think through colorful block programming, conductive clay circuits, sensor
-            toys, and foundational algorithmic thinking.</p>
-          <ul class="age-outcomes">
-            <li>✓ Scratch &amp; PictoBlox visual code</li>
-            <li>✓ Simple DC motors, buzzers &amp; LEDs</li>
-            <li>✓ Sequenced events, loops &amp; if/then logic</li>
-          </ul>
+        <!-- Age Card 1 -->
+        <div class="age-card flip-card" id="age-card-1" tabindex="0" role="button" aria-label="Ages 6-8 Junior Explorers. Click to flip for cohort details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="age-badge">AGES 6–8</span>
+              <h3>Junior Explorers</h3>
+              <p class="age-subtitle">Visual Logic &amp; First Physical Circuits</p>
+              <p>Children discover how machines think through colorful block programming, conductive clay circuits, sensor toys, and algorithmic thinking.</p>
+              <ul class="age-outcomes">
+                <li>✓ Scratch &amp; PictoBlox visual code</li>
+                <li>✓ Simple DC motors, buzzers &amp; LEDs</li>
+                <li>✓ Sequenced events, loops &amp; logic</li>
+              </ul>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for cohort details</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">COHORT LOG • AGES 6–8</span>
+                <span class="back-tag">LEVEL 01</span>
+              </div>
+              <h4>Foundation Logic &amp; Discovery</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🧩 CODE ENVIRONMENT</strong>
+                  <span>Scratch 3.0, PictoBlox drag-and-drop visual logic &amp; block sequences</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>⚡ HARDWARE KITS</strong>
+                  <span>Conductive copper tape, breadboards, 3V coin cells, vibration motors &amp; LEDs</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧠 COGNITIVE MILESTONE</strong>
+                  <span>Algorithmic thinking, decomposition of problems, if/else condition mapping</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 CAPSTONE BUILD</strong>
+                  <span>Interactive maze video game + animated motorized paper robot pet</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="#contact" class="btn-flip-cta">Book Free Trial ↗</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="age-card tilt-surface" data-tilt>
-          <span class="age-badge">AGES 9–12</span>
-          <h3>Core Innovators</h3>
-          <p class="age-subtitle">Arduino C++, Python &amp; Sensor Rovers</p>
-          <p>Transitioning to authentic microcontrollers and real text-based programming. Students build autonomous line
-            rovers and breadboard circuits.</p>
-          <ul class="age-outcomes">
-            <li>✓ Arduino IDE, C/C++ &amp; Python 3</li>
-            <li>✓ Breadboard prototyping &amp; motor drivers</li>
-            <li>✓ Ultrasonic obstacle avoidance rovers</li>
-          </ul>
+        <!-- Age Card 2 -->
+        <div class="age-card flip-card" id="age-card-2" tabindex="0" role="button" aria-label="Ages 9-12 Core Innovators. Click to flip for cohort details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="age-badge">AGES 9–12</span>
+              <h3>Core Innovators</h3>
+              <p class="age-subtitle">Arduino C++, Python &amp; Sensor Rovers</p>
+              <p>Transitioning to authentic microcontrollers and real text-based programming. Students build autonomous line rovers and breadboard circuits.</p>
+              <ul class="age-outcomes">
+                <li>✓ Arduino IDE, C/C++ &amp; Python 3</li>
+                <li>✓ Breadboard prototyping &amp; motor drivers</li>
+                <li>✓ Ultrasonic obstacle avoidance rovers</li>
+              </ul>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for cohort details</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">COHORT LOG • AGES 9–12</span>
+                <span class="back-tag">LEVEL 02</span>
+              </div>
+              <h4>Real Hardware &amp; Text Coding</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>▣ HARDWARE RIG</strong>
+                  <span>Arduino Uno R3, L298N dual H-bridge, HC-SR04 sonar &amp; dual DC gearmotors</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>💻 PROGRAMMING LANGUAGES</strong>
+                  <span>Arduino C++ (loops, conditionals, functions, ISRs) &amp; Python 3 control logic</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧠 COGNITIVE MILESTONE</strong>
+                  <span>Sensor signal processing, Ohm's law, PWM voltage regulation &amp; motor calibration</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 CAPSTONE BUILD</strong>
+                  <span>Autonomous multi-mode obstacle avoiding &amp; line-tracking mobile rover</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="#contact" class="btn-flip-cta">Book Free Trial ↗</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="age-card tilt-surface" data-tilt>
-          <span class="age-badge">AGES 13–16</span>
-          <h3>Advanced Engineers</h3>
-          <p class="age-subtitle">OpenCV Vision, ROS 2 &amp; Neural Edge AI</p>
-          <p>Pre-college engineering mastery. Students deploy trained neural models, design custom CAD chassis, connect
-            IoT clouds, and prepare for competitions.</p>
-          <ul class="age-outcomes">
-            <li>✓ Computer Vision (OpenCV &amp; YOLO)</li>
-            <li>✓ ROS 2 SLAM autonomous navigation</li>
-            <li>✓ 3D print fabrication &amp; cloud telemetry</li>
-          </ul>
+        <!-- Age Card 3 -->
+        <div class="age-card flip-card" id="age-card-3" tabindex="0" role="button" aria-label="Ages 13-16 Advanced Engineers. Click to flip for cohort details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="age-badge">AGES 13–16</span>
+              <h3>Advanced Engineers</h3>
+              <p class="age-subtitle">OpenCV Vision, ROS 2 &amp; Neural Edge AI</p>
+              <p>Pre-college engineering mastery. Students deploy trained neural models, design custom CAD chassis, connect IoT clouds, and prepare for competitions.</p>
+              <ul class="age-outcomes">
+                <li>✓ Computer Vision (OpenCV &amp; YOLO)</li>
+                <li>✓ ROS 2 SLAM autonomous navigation</li>
+                <li>✓ 3D print fabrication &amp; cloud telemetry</li>
+              </ul>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for cohort details</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">COHORT LOG • AGES 13–16</span>
+                <span class="back-tag">LEVEL 03</span>
+              </div>
+              <h4>Pre-College AI &amp; Robotics</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🧠 AI &amp; MACHINE LEARNING</strong>
+                  <span>Python 3.11, OpenCV 4, YOLOv8 models, Google Coral Edge TPU coprocessor</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>📡 IOT &amp; OPERATING SYSTEMS</strong>
+                  <span>ESP32 FreeRTOS, Mosquitto MQTT cloud mesh, ROS 2 Humble nodes &amp; LiDAR</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>📐 MECHANICAL FABRICATION</strong>
+                  <span>Parametric CAD in Fusion 360, slicing, PETG/Carbon 3D printing &amp; FEA stress testing</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 CAPSTONE BUILD</strong>
+                  <span>Vision-guided 4-DOF robotic sorting arm + autonomous indoor AGV</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="#contact" class="btn-flip-cta">Book Free Trial ↗</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -363,20 +1043,37 @@
     <section class="home-video-spotlight wrap">
       <div class="video-spotlight-card tilt-surface" data-tilt>
         <div class="spotlight-player">
-          <iframe src="https://www.youtube-nocookie.com/embed/pbJbpHjC3v0?rel=0&modestbranding=1"
+          <iframe id="main-spotlight-iframe" src="https://www.youtube-nocookie.com/embed/pbJbpHjC3v0?rel=0&modestbranding=1"
             title="Arduino Self-Balancing Robot Project in Action"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen loading="lazy">
           </iframe>
           <div class="video-hud-overlay">
-            <span class="video-telemetry-badge">● ARDUINO HARDWARE IN ACTION</span>
-            <span class="video-telemetry-badge">MPU6050 + PID LOOP</span>
+            <span class="video-telemetry-badge" id="spotlight-badge-1">● PID CONTROL / 200 HZ</span>
+            <span class="video-telemetry-badge" id="spotlight-badge-2">MPU6050 6-AXIS IMU</span>
           </div>
         </div>
         <div class="spotlight-content">
           <p class="eyebrow glitter-shimmer"><span></span> YOUTUBE HARDWARE SHOWCASE</p>
           <h2><span>Watch real Arduino robots</span><em>in action.</em></h2>
-          <p>
+          
+          <!-- Interactive Video Switcher Tabs -->
+          <div class="spotlight-switcher">
+            <button type="button" class="spotlight-tab-btn active" data-video-id="pbJbpHjC3v0" data-badge1="● PID CONTROL / 200 HZ" data-badge2="MPU6050 6-AXIS IMU" data-title="Arduino Self-Balancing Robot in Action">
+              ⚖️ Self-Balancing Bot
+            </button>
+            <button type="button" class="spotlight-tab-btn" data-video-id="ADJGxOrEZAM" data-badge1="● 4-AXIS SERVO PWM" data-badge2="DUAL ANALOG JOYSTICKS" data-title="4-DOF Servo Articulated Robotic Arm">
+              🦾 4-DOF Robot Arm
+            </button>
+            <button type="button" class="spotlight-tab-btn" data-video-id="jsvAL9ogFBw" data-badge1="● TRIPLE FLAME SENSORS" data-badge2="5V SUBMERSIBLE PUMP" data-title="Autonomous Fire-Fighting & Extinguisher Rover">
+              🚒 Fire Rover
+            </button>
+            <button type="button" class="spotlight-tab-btn" data-video-id="7KGJlU4-RWg" data-badge1="● HIGH-CONTRAST SENSING" data-badge2="DIFFERENTIAL PWM DRIVE" data-title="High-Speed Line Tracking Autonomous Bot">
+              🏎️ Line Follower
+            </button>
+          </div>
+
+          <p id="spotlight-dynamic-desc">
             See how young innovators transform simple Arduino microcontrollers, servo motors, and MPU6050 gyroscopes
             into self-balancing machines, articulated arms, and autonomous fire-fighting rovers.
           </p>
@@ -404,46 +1101,142 @@
       </div>
 
       <div class="method-pipeline">
-        <div class="method-card tilt-surface" data-tilt>
-          <div class="method-step-num">01</div>
-          <div class="method-icon-wrap"><i>💡</i></div>
-          <h3>Ideate &amp; Simulate</h3>
-          <p>Break real problems down into logic. Sketch flowcharts and simulate circuits safely before touching
-            physical components.</p>
-          <div class="method-tags">
-            <span class="tech-badge"><b class="tech-badge-logo">✦</b>First Principles</span>
-            <span class="tech-badge"><b class="tech-badge-logo">⌘</b>Logic Flow</span>
-            <span class="tech-badge"><b class="tech-badge-logo">Ti</b>Tinkercad</span>
+        <!-- Method 1 -->
+        <div class="method-card flip-card" id="method-card-1" tabindex="0" role="button" aria-label="Step 01 Ideate and Simulate. Click to flip for engineering details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="method-step-num">01</div>
+              <div class="method-icon-wrap"><i>💡</i></div>
+              <h3>Ideate &amp; Simulate</h3>
+              <p>Break real problems down into logic. Sketch flowcharts and simulate circuits safely before touching physical components.</p>
+              <div class="method-tags">
+                <span class="tech-badge"><b class="tech-badge-logo">✦</b>First Principles</span>
+                <span class="tech-badge"><b class="tech-badge-logo">⌘</b>Logic Flow</span>
+                <span class="tech-badge"><b class="tech-badge-logo">Ti</b>Tinkercad</span>
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for method specs</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">ENGINEERING STAGE 01</span>
+                <span class="back-tag">SIMULATION</span>
+              </div>
+              <h4>First-Principles Problem Solving</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>✏️ LOGIC FLOWCHARTS</strong>
+                  <span>Deconstruct mechanical tasks into structured state machines and decision trees</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>💻 VIRTUAL SIMULATION</strong>
+                  <span>Autodesk Tinkercad circuits testing voltage drops to protect physical IC chips</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>📐 FORMULAS &amp; POWER</strong>
+                  <span>Ohm's law (V=IR), gear ratios, and battery discharge current budgets</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html" class="btn-flip-cta">Learn Curriculum →</a>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="method-connector"><span>→</span></div>
 
-        <div class="method-card tilt-surface" data-tilt>
-          <div class="method-step-num">02</div>
-          <div class="method-icon-wrap"><i>⚙</i></div>
-          <h3>Wire &amp; Prototype</h3>
-          <p>Connect microcontrollers, sensor arrays, motor drivers, and power regulators on real breadboards with
-            custom chassis.</p>
-          <div class="method-tags">
-            <span class="tech-badge"><b class="tech-badge-logo">▣</b>Arduino / ESP32</span>
-            <span class="tech-badge"><b class="tech-badge-logo">◉</b>Sensors</span>
-            <span class="tech-badge"><b class="tech-badge-logo">↻</b>Actuators</span>
+        <!-- Method 2 -->
+        <div class="method-card flip-card" id="method-card-2" tabindex="0" role="button" aria-label="Step 02 Wire and Prototype. Click to flip for engineering details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="method-step-num">02</div>
+              <div class="method-icon-wrap"><i>⚙</i></div>
+              <h3>Wire &amp; Prototype</h3>
+              <p>Connect microcontrollers, sensor arrays, motor drivers, and power regulators on real breadboards with custom chassis.</p>
+              <div class="method-tags">
+                <span class="tech-badge"><b class="tech-badge-logo">▣</b>Arduino / ESP32</span>
+                <span class="tech-badge"><b class="tech-badge-logo">◉</b>Sensors</span>
+                <span class="tech-badge"><b class="tech-badge-logo">↻</b>Actuators</span>
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for method specs</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">ENGINEERING STAGE 02</span>
+                <span class="back-tag">HARDWARE</span>
+              </div>
+              <h4>Hands-on Silicon &amp; Wiring</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🔌 BREADBOARD CIRCUITS</strong>
+                  <span>Clean jumper routing, pull-up/pull-down resistors, and ground rail bonding</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>⚡ DRIVER ELECTRONICS</strong>
+                  <span>H-bridge dual PWM motor control, flyback diodes, and optical isolators</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🎛️ BENCH EQUIPMENT</strong>
+                  <span>Variable DC power supplies, true-RMS multimeters &amp; logic probe inspection</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html" class="btn-flip-cta">Learn Curriculum →</a>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="method-connector"><span>→</span></div>
 
-        <div class="method-card tilt-surface" data-tilt>
-          <div class="method-step-num">03</div>
-          <div class="method-icon-wrap"><i>🚀</i></div>
-          <h3>Code &amp; Deploy AI</h3>
-          <p>Write clean Python and C++ code, train computer vision models, connect IoT cloud dashboards, and test in
-            the real arena.</p>
-          <div class="method-tags">
-            <span class="tech-badge"><b class="tech-badge-logo">Py</b>Python 3</span>
-            <span class="tech-badge"><b class="tech-badge-logo">CV</b>OpenCV</span>
-            <span class="tech-badge"><b class="tech-badge-logo">AI</b>Neural Models</span>
+        <!-- Method 3 -->
+        <div class="method-card flip-card" id="method-card-3" tabindex="0" role="button" aria-label="Step 03 Code and Deploy AI. Click to flip for engineering details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="method-step-num">03</div>
+              <div class="method-icon-wrap"><i>🚀</i></div>
+              <h3>Code &amp; Deploy AI</h3>
+              <p>Write clean Python and C++ code, train computer vision models, connect IoT cloud dashboards, and test in the real arena.</p>
+              <div class="method-tags">
+                <span class="tech-badge"><b class="tech-badge-logo">Py</b>Python 3</span>
+                <span class="tech-badge"><b class="tech-badge-logo">CV</b>OpenCV</span>
+                <span class="tech-badge"><b class="tech-badge-logo">AI</b>Neural Models</span>
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for method specs</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">ENGINEERING STAGE 03</span>
+                <span class="back-tag">DEPLOYMENT</span>
+              </div>
+              <h4>Firmware &amp; Neural AI Tuning</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>💻 EMBEDDED CODING</strong>
+                  <span>Microsecond timer interrupts, FreeRTOS dual-core tasks, and serial telemetry</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>👁️ SPATIAL VISION AI</strong>
+                  <span>Real-time camera feed processing, YOLO bounding boxes &amp; contour centroid math</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏁 REAL ARENA VALIDATION</strong>
+                  <span>Track testing, closed-loop PID parameter tuning and autonomous runs</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html" class="btn-flip-cta">Learn Curriculum →</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -458,76 +1251,208 @@
 
       <div class="home-pillars-grid">
         <!-- Pillar 1 -->
-        <a class="home-pillar-card tilt-surface" data-tilt href="curriculum.html#robotics">
-          <div class="pillar-card-top">
-            <span class="pillar-stage">01 / FOUNDATION</span>
-            <i class="pillar-icon">⚙</i>
+        <div class="home-pillar-card flip-card" id="pillar-card-1" tabindex="0" role="button" aria-label="Pillar 1 Robotics and Electronics. Click to flip for full curriculum syllabus.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="pillar-card-top">
+                <span class="pillar-stage">01 / FOUNDATION</span>
+                <i class="pillar-icon">⚙</i>
+              </div>
+              <h3>Robotics &amp; Electronics</h3>
+              <p>Learn how physical machines sense their environment, compute responses, and move safely through circuits, sensors, and actuators.</p>
+              <div class="pillar-skills-list">
+                <span class="tech-badge"><b class="tech-badge-logo">▣</b>Arduino &amp; ESP32</span>
+                <span class="tech-badge"><b class="tech-badge-logo">◉</b>Sensors &amp; Actuators</span>
+                <span class="tech-badge"><b class="tech-badge-logo">↻</b>DC &amp; Servo Motors</span>
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for syllabus</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">BRANCH 01 • SYLLABUS</span>
+                <span class="back-tag">12 WEEKS</span>
+              </div>
+              <h4>Embedded Systems &amp; Circuits</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>▣ CONTROLLER RIGS</strong>
+                  <span>Arduino Uno R3, Mega 2560 &amp; ESP32 Dual-Core Xtensa LX6</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>⚡ ACTUATION &amp; POWER</strong>
+                  <span>PWM H-bridge motor drivers, 180°/360° precision servo actuation</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>◉ SENSORY MATRIX</strong>
+                  <span>Ultrasonic sonar, IR reflectance, analog potentiometers &amp; switches</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 CAPSTONE MACHINE</strong>
+                  <span>Closed-loop obstacle avoidance rover with active speed ramp braking</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html#robotics" class="btn-flip-cta">Full Curriculum →</a>
+              </div>
+            </div>
           </div>
-          <h3>Robotics &amp; Electronics</h3>
-          <p>Learn how physical machines sense their environment, compute responses, and move safely through circuits,
-            sensors, and actuators.</p>
-          <div class="pillar-skills-list">
-            <span class="tech-badge"><b class="tech-badge-logo">▣</b>Arduino &amp; ESP32</span>
-            <span class="tech-badge"><b class="tech-badge-logo">◉</b>Sensors &amp; Actuators</span>
-            <span class="tech-badge"><b class="tech-badge-logo">↻</b>DC &amp; Servo Motors</span>
-            <span class="tech-badge"><b class="tech-badge-logo">⌬</b>Breadboard Prototyping</span>
-          </div>
-          <span class="pillar-card-link">Explore Robotics Branch <i>↗</i></span>
-        </a>
+        </div>
 
         <!-- Pillar 2 -->
-        <a class="home-pillar-card tilt-surface" data-tilt href="curriculum.html#ai">
-          <div class="pillar-card-top">
-            <span class="pillar-stage">02 / THINK &amp; SEE</span>
-            <i class="pillar-icon">◉</i>
+        <div class="home-pillar-card flip-card" id="pillar-card-2" tabindex="0" role="button" aria-label="Pillar 2 AI and Computer Vision. Click to flip for full curriculum syllabus.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="pillar-card-top">
+                <span class="pillar-stage">02 / THINK &amp; SEE</span>
+                <i class="pillar-icon">◉</i>
+              </div>
+              <h3>AI &amp; Computer Vision</h3>
+              <p>Give robots sight and perception. Train vision models, track objects in live video streams, and deploy real-time decision algorithms.</p>
+              <div class="pillar-skills-list">
+                <span class="tech-badge"><b class="tech-badge-logo">Py</b>Python &amp; OpenCV</span>
+                <span class="tech-badge"><b class="tech-badge-logo">AI</b>Machine Learning</span>
+                <span class="tech-badge"><b class="tech-badge-logo">◈</b>Object Tracking</span>
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for syllabus</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">BRANCH 02 • SYLLABUS</span>
+                <span class="back-tag">12 WEEKS</span>
+              </div>
+              <h4>Computer Vision &amp; Edge AI</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🐍 PYTHON PIPELINE</strong>
+                  <span>Python 3.11, OpenCV 4 camera streams, NumPy matrix manipulation</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>👁️ OBJECT DETECTION</strong>
+                  <span>HSV color masking, contour tracking, YOLOv8 object recognition</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧠 EDGE ACCELERATION</strong>
+                  <span>Coral Edge TPU coprocessor (4 TOPS) running quantized models</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 CAPSTONE MACHINE</strong>
+                  <span>Real-time conveyor item sorter &amp; pan-tilt face tracking camera</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html#ai" class="btn-flip-cta">Full Curriculum →</a>
+              </div>
+            </div>
           </div>
-          <h3>AI &amp; Computer Vision</h3>
-          <p>Give robots sight and perception. Train vision models, track objects in live video streams, and deploy
-            real-time decision algorithms.</p>
-          <div class="pillar-skills-list">
-            <span class="tech-badge"><b class="tech-badge-logo">Py</b>Python &amp; OpenCV</span>
-            <span class="tech-badge"><b class="tech-badge-logo">AI</b>Machine Learning</span>
-            <span class="tech-badge"><b class="tech-badge-logo">◈</b>Object Tracking</span>
-            <span class="tech-badge"><b class="tech-badge-logo">✦</b>Gesture Recognition</span>
-          </div>
-          <span class="pillar-card-link">Explore AI &amp; Vision Branch <i>↗</i></span>
-        </a>
+        </div>
 
         <!-- Pillar 3 -->
-        <a class="home-pillar-card tilt-surface" data-tilt href="curriculum.html#iot">
-          <div class="pillar-card-top">
-            <span class="pillar-stage">03 / CONNECT</span>
-            <i class="pillar-icon">⌁</i>
+        <div class="home-pillar-card flip-card" id="pillar-card-3" tabindex="0" role="button" aria-label="Pillar 3 IoT and Smart Automation. Click to flip for full curriculum syllabus.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="pillar-card-top">
+                <span class="pillar-stage">03 / CONNECT</span>
+                <i class="pillar-icon">⌁</i>
+              </div>
+              <h3>IoT &amp; Smart Automation</h3>
+              <p>Bridge physical devices with cloud networks. Design telemetry dashboards, remote MQTT controllers, and autonomous smart-home nodes.</p>
+              <div class="pillar-skills-list">
+                <span class="tech-badge"><b class="tech-badge-logo">⌁</b>Wi-Fi, BLE &amp; MQTT</span>
+                <span class="tech-badge"><b class="tech-badge-logo">▣</b>ESP32 IoT Systems</span>
+                <span class="tech-badge"><b class="tech-badge-logo">☁</b>Cloud Dashboards</span>
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for syllabus</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">BRANCH 03 • SYLLABUS</span>
+                <span class="back-tag">10 WEEKS</span>
+              </div>
+              <h4>IoT Telemetry &amp; Automation</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>📡 PROTOCOLS &amp; MESH</strong>
+                  <span>Mosquitto MQTT Pub/Sub, WebSockets, ESP-NOW zero-lag links</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>☁️ CLOUD PLATFORMS</strong>
+                  <span>Interactive responsive dashboards, live gauges, JSON push telemetry</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🎛️ INDUSTRIAL SENSORS</strong>
+                  <span>Capacitive soil sensors, DHT22 probes, 10A optocoupled relays</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 CAPSTONE MACHINE</strong>
+                  <span>Smart automated greenhouse node with instant WhatsApp webhook alerts</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html#iot" class="btn-flip-cta">Full Curriculum →</a>
+              </div>
+            </div>
           </div>
-          <h3>IoT &amp; Smart Automation</h3>
-          <p>Bridge physical devices with cloud networks. Design telemetry dashboards, remote MQTT controllers, and
-            autonomous smart-home nodes.</p>
-          <div class="pillar-skills-list">
-            <span class="tech-badge"><b class="tech-badge-logo">⌁</b>Wi-Fi, BLE &amp; MQTT</span>
-            <span class="tech-badge"><b class="tech-badge-logo">▣</b>ESP32 IoT Systems</span>
-            <span class="tech-badge"><b class="tech-badge-logo">☁</b>Cloud Dashboards</span>
-            <span class="tech-badge"><b class="tech-badge-logo">⌬</b>Home Automation</span>
-          </div>
-          <span class="pillar-card-link">Explore IoT Branch <i>↗</i></span>
-        </a>
+        </div>
 
         <!-- Pillar 4 -->
-        <a class="home-pillar-card tilt-surface" data-tilt href="curriculum.html#mechanical">
-          <div class="pillar-card-top">
-            <span class="pillar-stage">04 / ENGINEER</span>
-            <i class="pillar-icon">⬡</i>
+        <div class="home-pillar-card flip-card" id="pillar-card-4" tabindex="0" role="button" aria-label="Pillar 4 Mechanical CAD and ROS 2. Click to flip for full curriculum syllabus.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="pillar-card-top">
+                <span class="pillar-stage">04 / ENGINEER</span>
+                <i class="pillar-icon">⬡</i>
+              </div>
+              <h3>Mechanical CAD &amp; ROS 2</h3>
+              <p>Design custom chassis in CAD, print physical components on 3D printers, and integrate ROS 2 SLAM navigation for advanced mobility.</p>
+              <div class="pillar-skills-list">
+                <span class="tech-badge"><b class="tech-badge-logo">3D</b>CAD &amp; 3D Printing</span>
+                <span class="tech-badge"><b class="tech-badge-logo">R2</b>ROS 2 Robotics</span>
+                <span class="tech-badge"><b class="tech-badge-logo">◈</b>SLAM Navigation</span>
+              </div>
+              <div class="card-flip-prompt">
+                <span>👆 Click to flip for syllabus</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">BRANCH 04 • SYLLABUS</span>
+                <span class="back-tag">12 WEEKS</span>
+              </div>
+              <h4>CAD Design &amp; ROS 2 Robotics</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>📐 CAD MODELING</strong>
+                  <span>Autodesk Fusion 360 parametric sketches, planetary gears, tolerances</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🖨️ 3D PRINT FABRICATION</strong>
+                  <span>Cura slicing, PETG/Carbon infill density, heat-set brass threaded inserts</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🤖 ROS 2 ECOSYSTEM</strong>
+                  <span>ROS 2 Humble publishers/subscribers, LiDAR SLAM mapping &amp; Nav2</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🏆 CAPSTONE MACHINE</strong>
+                  <span>Autonomous Mobile Robot (AMR) with 4-DOF articulated robotic arm</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="curriculum.html#mechanical" class="btn-flip-cta">Full Curriculum →</a>
+              </div>
+            </div>
           </div>
-          <h3>Mechanical CAD &amp; ROS 2</h3>
-          <p>Design custom chassis in CAD, print physical components on 3D printers, and integrate ROS 2 SLAM navigation
-            for advanced mobility.</p>
-          <div class="pillar-skills-list">
-            <span class="tech-badge"><b class="tech-badge-logo">3D</b>CAD &amp; 3D Printing</span>
-            <span class="tech-badge"><b class="tech-badge-logo">R2</b>ROS 2 Robotics</span>
-            <span class="tech-badge"><b class="tech-badge-logo">◈</b>SLAM Navigation</span>
-            <span class="tech-badge"><b class="tech-badge-logo">⚡</b>Autonomous AGVs</span>
-          </div>
-          <span class="pillar-card-link">Explore Mechanical &amp; ROS <i>↗</i></span>
-        </a>
+        </div>
       </div>
     </section>
 
@@ -543,58 +1468,148 @@
 
       <div class="inventions-grid">
         <!-- Project 1 -->
-        <article class="invention-card tilt-surface" data-tilt>
-          <div class="invention-media">
-            <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=800&q=85"
-              alt="Autonomous obstacle avoiding rover built by students" />
-            <span class="invention-badge">● AUTONOMOUS</span>
-          </div>
-          <div class="invention-body">
-            <small class="invention-meta">ARDUINO • ULTRASONIC • L298N</small>
-            <h3>Autonomous Obstacle-Avoiding Rover</h3>
-            <p>A dual-motor wheeled robot that dynamically scans surroundings with an ultrasonic sensor and chooses safe
-              clearance paths.</p>
-            <div class="invention-footer">
-              <span class="invention-author">● WORKING LAB PROTOTYPE</span>
-              <a class="invention-link" href="projects.html">View project brief <i>↗</i></a>
+        <article class="invention-card flip-card" id="invention-card-1" tabindex="0" role="button" aria-label="Autonomous Obstacle-Avoiding Rover. Click to flip for BOM and build log.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="invention-media">
+                <img src="robot-rover.jpg" alt="Autonomous obstacle avoiding rover built by students" loading="lazy" />
+                <span class="invention-badge">● AUTONOMOUS</span>
+              </div>
+              <div class="invention-body">
+                <small class="invention-meta">ARDUINO • ULTRASONIC • L298N</small>
+                <h3>Obstacle-Avoiding Rover</h3>
+                <p>Dual-motor rover that dynamically scans surroundings with ultrasonic sonar and chooses safe clearance paths.</p>
+                <div class="card-flip-prompt">
+                  <span>🔄 Click to view BOM &amp; log</span><i>→</i>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">STUDENT INVENTOR LAB LOG</span>
+                <span class="back-tag">VERIFIED BUILD</span>
+              </div>
+              <h4>Obstacle Rover Lab Specs</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>📦 BILL OF MATERIALS</strong>
+                  <span>Arduino Uno R3, HC-SR04 Sonar, L298N Dual H-Bridge, 2x TT Gearmotors, 7.4V Li-ion</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧠 LOGIC ALGORITHM</strong>
+                  <span>Scanning servo sweep (180°), dynamic obstacle distance matrix, differential pivot turns</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>⏱️ BUILD DURATION</strong>
+                  <span>6 Lab Sessions • Ages 9–12 • 100% C++ Code Written by Student</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>💡 KEY INNOVATION</strong>
+                  <span>Ramped PWM deceleration before obstacle threshold to prevent wheel slip</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="projects.html" class="btn-flip-cta">Project Schematics ↗</a>
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Project 2 -->
-        <article class="invention-card tilt-surface" data-tilt>
-          <div class="invention-media">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=85"
-              alt="Vision-guided robotic arm running OpenCV" />
-            <span class="invention-badge">● COMPUTER VISION</span>
-          </div>
-          <div class="invention-body">
-            <small class="invention-meta">PYTHON • OPENCV • 4-DOF ARM</small>
-            <h3>Vision-Guided Sorting Robot Arm</h3>
-            <p>Uses a camera to detect object colors and geometries, calculating inverse kinematics to pick and deposit
-              items into target bins.</p>
-            <div class="invention-footer">
-              <span class="invention-author">● WORKING LAB PROTOTYPE</span>
-              <a class="invention-link" href="projects.html">View project brief <i>↗</i></a>
+        <article class="invention-card flip-card" id="invention-card-2" tabindex="0" role="button" aria-label="Vision-Guided Sorting Robot Arm. Click to flip for BOM and build log.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="invention-media">
+                <img src="robot-arm-vision.jpg" alt="Vision-guided robotic arm running OpenCV" loading="lazy" />
+                <span class="invention-badge">● COMPUTER VISION</span>
+              </div>
+              <div class="invention-body">
+                <small class="invention-meta">PYTHON • OPENCV • 4-DOF ARM</small>
+                <h3>Vision Sorting Robot Arm</h3>
+                <p>Uses a camera to detect object colors and geometries, calculating inverse kinematics to pick and deposit into bins.</p>
+                <div class="card-flip-prompt">
+                  <span>🔄 Click to view BOM &amp; log</span><i>→</i>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">STUDENT INVENTOR LAB LOG</span>
+                <span class="back-tag">VERIFIED BUILD</span>
+              </div>
+              <h4>Vision Sorter Lab Specs</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>📦 BILL OF MATERIALS</strong>
+                  <span>4x MG996R Metal Servos, PCA9685 16-Ch PWM Board, 3D Printed Arm, HD USB Camera</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧠 LOGIC ALGORITHM</strong>
+                  <span>OpenCV HSV color masking, centroid contour math, 2D geometric Inverse Kinematics</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>⏱️ BUILD DURATION</strong>
+                  <span>8 Lab Sessions • Ages 13–16 • Python 3 &amp; OpenCV Pipeline</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>💡 KEY INNOVATION</strong>
+                  <span>Autonomous conveyor pick-up with real-time coordinate calibration offsets</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="projects.html" class="btn-flip-cta">Project Schematics ↗</a>
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Project 3 -->
-        <article class="invention-card tilt-surface" data-tilt>
-          <div class="invention-media">
-            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=85"
-              alt="Smart IoT environmental monitoring station" />
-            <span class="invention-badge">● IOT LIVE</span>
-          </div>
-          <div class="invention-body">
-            <small class="invention-meta">ESP32 • MQTT • CLOUD TELEMETRY</small>
-            <h3>Smart IoT Soil &amp; Weather Station</h3>
-            <p>Monitors soil moisture, temperature, and ambient humidity, pushing real-time alerts and trigger commands
-              to a web dashboard.</p>
-            <div class="invention-footer">
-              <span class="invention-author">● WORKING LAB PROTOTYPE</span>
-              <a class="invention-link" href="projects.html">View project brief <i>↗</i></a>
+        <article class="invention-card flip-card" id="invention-card-3" tabindex="0" role="button" aria-label="Smart IoT Soil & Weather Station. Click to flip for BOM and build log.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="invention-media">
+                <img src="robot-iot-station.jpg" alt="Smart IoT environmental monitoring station" loading="lazy" />
+                <span class="invention-badge">● IOT LIVE</span>
+              </div>
+              <div class="invention-body">
+                <small class="invention-meta">ESP32 • MQTT • CLOUD TELEMETRY</small>
+                <h3>Smart IoT Weather Station</h3>
+                <p>Monitors soil moisture, temperature, and ambient humidity, pushing real-time alerts and trigger commands to a web dashboard.</p>
+                <div class="card-flip-prompt">
+                  <span>🔄 Click to view BOM &amp; log</span><i>→</i>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">STUDENT INVENTOR LAB LOG</span>
+                <span class="back-tag">VERIFIED BUILD</span>
+              </div>
+              <h4>Smart IoT Station Specs</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>📦 BILL OF MATERIALS</strong>
+                  <span>ESP32 NodeMCU, Capacitive Soil Probe v1.2, DHT22 Sensor, 0.96" I2C OLED, 5V Relay</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🧠 LOGIC ALGORITHM</strong>
+                  <span>Deep-sleep 15-min cycles, MQTT publish JSON packets, threshold moisture pump trigger</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>⏱️ BUILD DURATION</strong>
+                  <span>5 Lab Sessions • Ages 10–14 • Arduino C++ &amp; WebSockets</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>💡 KEY INNOVATION</strong>
+                  <span>Corrosion-free capacitive sensing + instant WhatsApp webhook alert under dry conditions</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="projects.html" class="btn-flip-cta">Project Schematics ↗</a>
+              </div>
             </div>
           </div>
         </article>
@@ -609,32 +1624,144 @@
       </div>
 
       <div class="advantages-grid">
-        <div class="advantage-card tilt-surface" data-tilt>
-          <span class="advantage-icon">✦</span>
-          <h3>100% Real Physical Hardware</h3>
-          <p>No toy kits or screen-only simulations. Students work with real microcontrollers, sensors, wiring, and
-            soldering equipment.</p>
+        <!-- Advantage 1 -->
+        <div class="advantage-card flip-card" id="advantage-card-1" tabindex="0" role="button" aria-label="100% Real Physical Hardware. Click to flip for lab details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="advantage-icon">✦</span>
+              <h3>100% Real Hardware</h3>
+              <p>No toy kits or simulations. Students wire real microcontrollers, sensors, and actuators.</p>
+              <div class="card-flip-prompt">
+                <span>👆 Click to inspect</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">LAB STANDARD</span>
+                <span class="back-tag">HARDWARE</span>
+              </div>
+              <h4>Authentic Silicon &amp; Prototyping</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🔬 REAL COMPONENTS</strong>
+                  <span>Direct hands-on with Arduino, ESP32, bench power supplies &amp; motor drivers</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>🚫 ZERO TOY KITS</strong>
+                  <span>No plastic snap toys or screen-only code blocks for serious learners</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="lab.html" class="btn-flip-cta">Visit Lab ↗</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="advantage-card tilt-surface" data-tilt>
-          <span class="advantage-icon">✦</span>
-          <h3>Max 6 Students per Lab Cohort</h3>
-          <p>Every student receives personalized 1:1 guidance from experienced robotics and artificial intelligence
-            engineers.</p>
+        <!-- Advantage 2 -->
+        <div class="advantage-card flip-card" id="advantage-card-2" tabindex="0" role="button" aria-label="Max 6 Students per Lab Cohort. Click to flip for lab details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="advantage-icon">✦</span>
+              <h3>Max 6 Students / Cohort</h3>
+              <p>Every student receives personalized 1:1 guidance from experienced robotics engineers.</p>
+              <div class="card-flip-prompt">
+                <span>👆 Click to inspect</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">LAB STANDARD</span>
+                <span class="back-tag">MENTORSHIP</span>
+              </div>
+              <h4>Elite 1:1 Engineering Attention</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>👨‍🏫 1:1 MENTOR RATIO</strong>
+                  <span>Dedicated robotics mentors sitting beside each student during builds</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>⚡ FAST DEBUGGING</strong>
+                  <span>Instant circuit &amp; code troubleshooting with zero queueing</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="#contact" class="btn-flip-cta">Book Trial ↗</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="advantage-card tilt-surface" data-tilt>
-          <span class="advantage-icon">✦</span>
-          <h3>Competition &amp; Exhibition Ready</h3>
-          <p>Students build portfolio-grade projects ready for international robotics competitions, hackathons, and STEM
-            science fairs.</p>
+        <!-- Advantage 3 -->
+        <div class="advantage-card flip-card" id="advantage-card-3" tabindex="0" role="button" aria-label="Competition & Exhibition Ready. Click to flip for lab details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="advantage-icon">✦</span>
+              <h3>Competition Ready</h3>
+              <p>Students build portfolio-grade projects ready for international robotics competitions and STEM fairs.</p>
+              <div class="card-flip-prompt">
+                <span>👆 Click to inspect</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">LAB STANDARD</span>
+                <span class="back-tag">PORTFOLIO</span>
+              </div>
+              <h4>Olympiads &amp; Competitions</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>🏆 COMPETITIONS</strong>
+                  <span>WRO, FIRST LEGO League, National Science Congress &amp; Hackathons</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>📑 GITHUB REPOSITORIES</strong>
+                  <span>Documented code portfolios giving strong pre-college STEM credentials</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="projects.html" class="btn-flip-cta">View Projects ↗</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="advantage-card tilt-surface" data-tilt>
-          <span class="advantage-icon">✦</span>
-          <h3>Patent-First Mindset</h3>
-          <p>We train young innovators to solve real daily problems, document technical specifications, and think like
-            working inventors.</p>
+        <!-- Advantage 4 -->
+        <div class="advantage-card flip-card" id="advantage-card-4" tabindex="0" role="button" aria-label="Patent-First Mindset. Click to flip for lab details.">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="advantage-icon">✦</span>
+              <h3>Patent-First Mindset</h3>
+              <p>We train young innovators to solve real daily problems, document technical specs, and think like inventors.</p>
+              <div class="card-flip-prompt">
+                <span>👆 Click to inspect</span><i class="flip-icon">↻</i>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <span class="back-eyebrow">LAB STANDARD</span>
+                <span class="back-tag">INVENTION</span>
+              </div>
+              <h4>Original Problem Solving &amp; IP</h4>
+              <div class="back-details-list">
+                <div class="back-detail-item">
+                  <strong>💡 NOVEL DESIGNS</strong>
+                  <span>Students identify novel mechanisms and write engineering project logs</span>
+                </div>
+                <div class="back-detail-item">
+                  <strong>📜 IP MENTORSHIP</strong>
+                  <span>Guidance on documenting CAD and schematics for provisional patent filings</span>
+                </div>
+              </div>
+              <div class="back-actions">
+                <button type="button" class="btn-flip-return" aria-label="Flip back to front">↩ Flip Card</button>
+                <a href="#contact" class="btn-flip-cta">Book Trial ↗</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
