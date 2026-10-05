@@ -1419,6 +1419,69 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		}
 	});
+
+	// ========================================================
+	// FOOTER INTERACTIVE STAR RATING & NEWSLETTER
+	// ========================================================
+	var starRater = document.getElementById('footer-star-rater');
+	if (starRater) {
+		var stars = starRater.querySelectorAll('.star-btn');
+		var feedback = document.getElementById('rater-feedback-msg');
+
+		stars.forEach(function(star, idx) {
+			star.addEventListener('mouseenter', function() {
+				stars.forEach(function(s, i) {
+					if (i <= idx) {
+						s.classList.add('hovered');
+					} else {
+						s.classList.remove('hovered');
+					}
+				});
+			});
+
+			star.addEventListener('click', function() {
+				var rating = parseInt(star.getAttribute('data-star') || '5', 10);
+				stars.forEach(function(s, i) {
+					s.classList.remove('hovered');
+					if (i < rating) {
+						s.classList.add('active-gold');
+						s.setAttribute('aria-checked', 'true');
+					} else {
+						s.classList.remove('active-gold');
+						s.setAttribute('aria-checked', 'false');
+					}
+				});
+				if (feedback) {
+					feedback.textContent = '🎉 Thank you for rating ' + rating + ' Stars!';
+					feedback.style.color = '#f59e0b';
+				}
+			});
+		});
+
+		starRater.addEventListener('mouseleave', function() {
+			stars.forEach(function(s) {
+				s.classList.remove('hovered');
+			});
+		});
+	}
+
+	window.handleFooterSubscribe = function(e) {
+		e.preventDefault();
+		var emailInput = document.getElementById('footer-newsletter-email');
+		var msg = document.getElementById('newsletter-status-msg');
+		if (!emailInput || !emailInput.value) return;
+
+		var email = emailInput.value.trim();
+		if (msg) {
+			msg.textContent = '🚀 Subscribed! Welcome to RoboNex AI.';
+			msg.style.color = '#00f5a0';
+		}
+		emailInput.value = '';
+		setTimeout(function() {
+			if (msg) msg.textContent = '';
+		}, 4000);
+	};
 });
+
 
 
