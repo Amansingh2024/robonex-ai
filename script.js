@@ -1481,6 +1481,32 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (msg) msg.textContent = '';
 		}, 4000);
 	};
+
+	// ========================================================
+	// HERO ROBOT VIDEO: RESILIENT AUTOPLAY FOR IPHONE & ANDROID
+	// ========================================================
+	var heroVideo = document.querySelector('.home-hero-video');
+	if (heroVideo) {
+		heroVideo.muted = true;
+		heroVideo.defaultMuted = true;
+		heroVideo.playsInline = true;
+		heroVideo.setAttribute('muted', '');
+		heroVideo.setAttribute('playsinline', '');
+		heroVideo.setAttribute('webkit-playsinline', '');
+		var playPromise = heroVideo.play();
+		if (playPromise !== undefined) {
+			playPromise.catch(function() {
+				var startPlayback = function() {
+					heroVideo.muted = true;
+					heroVideo.play().catch(function() {});
+					document.removeEventListener('touchstart', startPlayback);
+					document.removeEventListener('click', startPlayback);
+				};
+				document.addEventListener('touchstart', startPlayback, { passive: true, once: true });
+				document.addEventListener('click', startPlayback, { once: true });
+			});
+		}
+	}
 });
 
 

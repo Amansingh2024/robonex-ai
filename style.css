@@ -13719,9 +13719,22 @@ h3 em {
    ========================================================= */
 
 .what-we-do-section {
-  padding: 80px 0 40px !important;
+  margin-top: 110px !important;
+  padding: 100px 0 50px !important;
   position: relative !important;
   z-index: 2 !important;
+}
+
+.what-we-do-section::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: min(850px, 90%) !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 157, 0, 0.6) 20%, rgba(0, 245, 160, 0.7) 50%, rgba(255, 157, 0, 0.6) 80%, transparent) !important;
+  box-shadow: 0 0 24px rgba(0, 245, 160, 0.45), 0 0 12px rgba(255, 157, 0, 0.35) !important;
 }
 
 .what-we-do-header {
@@ -14304,18 +14317,56 @@ h3 em {
 }
 
 /* =========================================================
-   HERO ROBOT VIDEO: LARGER, FULL VIDEO DISPLAY & RIGHT-ALIGNED SUMMARY BOX
+   HERO ROBOT VIDEO: FULL-SIZE CINEMATIC HERO & RIGHT-ALIGNED SUMMARY BOX
    ========================================================= */
 
 .home-hero {
-  min-height: max(740px, 90vh) !important;
+  min-height: max(780px, 94vh) !important;
   position: relative !important;
   overflow: hidden !important;
 }
 
 @media (min-width: 820px) {
   .home-hero {
-    min-height: max(780px, 92vh) !important;
+    min-height: max(860px, 98vh) !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .home-hero-media {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+  }
+
+  /* Full-size prominently displayed robot video covering whole stage without clipping */
+  .home-hero-video {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 32% center !important;
+    filter: contrast(1.1) brightness(1.03) saturate(1.16) !important;
+    z-index: 1 !important;
+    transform: none !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+  }
+
+  /* Cinematic depth overlays so video is full size and text on right is crystal clear */
+  .home-hero-media::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(90deg, rgba(8, 14, 12, 0.15) 0%, rgba(8, 14, 12, 0.35) 45%, rgba(8, 14, 12, 0.82) 75%, rgba(8, 14, 12, 0.96) 100%),
+                linear-gradient(0deg, rgba(8, 14, 12, 0.95) 0%, transparent 15%, transparent 85%, rgba(8, 14, 12, 0.75) 100%) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
   }
 
   .home-hero-inner {
@@ -14324,24 +14375,9 @@ h3 em {
     align-items: center !important;
     position: relative !important;
     z-index: 3 !important;
-    padding-right: clamp(16px, 4vw, 40px) !important;
-    min-height: max(780px, 92vh) !important;
-  }
-
-  /* Full robot video displayed prominently without cropping */
-  .home-hero-video {
-    position: absolute !important;
-    left: clamp(-20px, -2vw, 0px) !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: min(1080px, 70vw) !important;
-    height: 94% !important;
-    object-fit: contain !important;
-    object-position: left center !important;
-    filter: contrast(1.08) brightness(1.02) saturate(1.1) !important;
-    z-index: 1 !important;
-    mask-image: radial-gradient(ellipse 90% 86% at 48% 50%, black 72%, transparent 100%) !important;
-    -webkit-mask-image: radial-gradient(ellipse 90% 86% at 48% 50%, black 72%, transparent 100%) !important;
+    width: 100% !important;
+    padding-right: clamp(20px, 5vw, 60px) !important;
+    min-height: max(860px, 98vh) !important;
   }
 
   .home-summary {
@@ -14349,16 +14385,17 @@ h3 em {
     margin-right: 0 !important;
     max-width: 490px !important;
     width: min(490px, 94%) !important;
-    padding: 26px 24px !important;
+    padding: 28px 24px !important;
     border-radius: 20px !important;
-    background: rgba(13, 19, 17, 0.84) !important;
-    border: 1px solid rgba(255, 255, 255, 0.16) !important;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65), 0 0 30px rgba(0, 245, 160, 0.12) !important;
+    background: rgba(12, 18, 16, 0.86) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 245, 160, 0.14) !important;
     backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
   }
 
   .home-summary h1 {
-    font-size: clamp(28px, 3.5vw, 44px) !important;
+    font-size: clamp(28px, 3.4vw, 42px) !important;
     line-height: 1.15 !important;
     margin: 8px 0 12px !important;
   }
@@ -14406,29 +14443,40 @@ h3 em {
 @media (max-width: 819px) {
   .home-hero {
     min-height: auto !important;
-    padding: 24px 0 35px !important;
+    padding: 18px 0 30px !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 16px !important;
+    gap: 20px !important;
+    overflow: visible !important;
   }
 
   .home-hero-media {
     position: relative !important;
-    height: clamp(250px, 48vw, 360px) !important;
+    height: clamp(380px, 82vw, 560px) !important;
     width: 100% !important;
+    border-radius: 20px !important;
     overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #0d1412 !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 245, 160, 0.16) !important;
+    border: 1.5px solid rgba(0, 245, 160, 0.3) !important;
   }
 
   .home-hero-video {
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    filter: contrast(1.08) brightness(1.02) saturate(1.1) !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    object-position: center 25% !important;
+    filter: contrast(1.1) brightness(1.05) saturate(1.18) !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
   }
 
   .home-hero-inner {
-    padding-top: 10px !important;
+    padding-top: 0 !important;
     min-height: auto !important;
     width: 100% !important;
   }
@@ -14438,6 +14486,44 @@ h3 em {
     margin: 0 auto !important;
     padding: 24px 20px !important;
     box-sizing: border-box !important;
+    background: rgba(14, 20, 18, 0.94) !important;
+    border: 1.5px solid rgba(255, 157, 0, 0.35) !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 157, 0, 0.12) !important;
+    border-radius: 20px !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+  }
+
+  .home-summary h1 {
+    font-size: clamp(26px, 6.8vw, 36px) !important;
+    line-height: 1.2 !important;
+    margin: 6px 0 12px !important;
+  }
+
+  .home-summary .eyebrow {
+    font-size: 10px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .hero-truth {
+    gap: 6px !important;
+    margin: 10px 0 14px !important;
+  }
+
+  .hero-truth span {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+  }
+
+  .home-summary .home-lead {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin: 12px 0 18px !important;
+  }
+
+  .what-we-do-section {
+    margin-top: 70px !important;
+    padding: 70px 0 40px !important;
   }
 }
 
