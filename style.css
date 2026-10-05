@@ -13719,10 +13719,11 @@ h3 em {
    ========================================================= */
 
 .what-we-do-section {
-  margin-top: 110px !important;
-  padding: 100px 0 50px !important;
+  margin-top: 150px !important;
+  padding: 120px 0 60px !important;
   position: relative !important;
   z-index: 2 !important;
+  background: radial-gradient(ellipse 95% 45% at 50% 0%, rgba(0, 245, 160, 0.05), transparent 75%) !important;
 }
 
 .what-we-do-section::before {
@@ -13731,10 +13732,10 @@ h3 em {
   top: 0 !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  width: min(850px, 90%) !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, rgba(255, 157, 0, 0.6) 20%, rgba(0, 245, 160, 0.7) 50%, rgba(255, 157, 0, 0.6) 80%, transparent) !important;
-  box-shadow: 0 0 24px rgba(0, 245, 160, 0.45), 0 0 12px rgba(255, 157, 0, 0.35) !important;
+  width: min(1000px, 92%) !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 157, 0, 0.7) 20%, rgba(0, 245, 160, 0.85) 50%, rgba(255, 157, 0, 0.7) 80%, transparent) !important;
+  box-shadow: 0 0 35px rgba(0, 245, 160, 0.6), 0 0 16px rgba(255, 157, 0, 0.45) !important;
 }
 
 .what-we-do-header {
@@ -14328,7 +14329,8 @@ h3 em {
 
 @media (min-width: 820px) {
   .home-hero {
-    min-height: max(860px, 98vh) !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
     position: relative !important;
     display: flex !important;
     align-items: center !important;
@@ -14350,8 +14352,8 @@ h3 em {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    object-position: 32% center !important;
-    filter: contrast(1.1) brightness(1.03) saturate(1.16) !important;
+    object-position: 30% center !important;
+    filter: contrast(1.1) brightness(1.04) saturate(1.16) !important;
     z-index: 1 !important;
     transform: none !important;
     mask-image: none !important;
@@ -14363,7 +14365,7 @@ h3 em {
     content: "" !important;
     position: absolute !important;
     inset: 0 !important;
-    background: linear-gradient(90deg, rgba(8, 14, 12, 0.15) 0%, rgba(8, 14, 12, 0.35) 45%, rgba(8, 14, 12, 0.82) 75%, rgba(8, 14, 12, 0.96) 100%),
+    background: linear-gradient(90deg, rgba(8, 14, 12, 0.12) 0%, rgba(8, 14, 12, 0.32) 45%, rgba(8, 14, 12, 0.82) 75%, rgba(8, 14, 12, 0.96) 100%),
                 linear-gradient(0deg, rgba(8, 14, 12, 0.95) 0%, transparent 15%, transparent 85%, rgba(8, 14, 12, 0.75) 100%) !important;
     z-index: 2 !important;
     pointer-events: none !important;
@@ -14377,14 +14379,14 @@ h3 em {
     z-index: 3 !important;
     width: 100% !important;
     padding-right: clamp(20px, 5vw, 60px) !important;
-    min-height: max(860px, 98vh) !important;
+    min-height: 100vh !important;
   }
 
   .home-summary {
     margin-left: auto !important;
     margin-right: 0 !important;
-    max-width: 490px !important;
-    width: min(490px, 94%) !important;
+    max-width: 460px !important;
+    width: min(460px, 94%) !important;
     padding: 28px 24px !important;
     border-radius: 20px !important;
     background: rgba(12, 18, 16, 0.86) !important;
@@ -14443,7 +14445,7 @@ h3 em {
 @media (max-width: 819px) {
   .home-hero {
     min-height: auto !important;
-    padding: 18px 0 30px !important;
+    padding: 16px 0 24px !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
@@ -14452,16 +14454,25 @@ h3 em {
 
   .home-hero-media {
     position: relative !important;
-    height: clamp(380px, 82vw, 560px) !important;
+    height: clamp(340px, 90vw, 580px) !important;
     width: 100% !important;
     border-radius: 20px !important;
     overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background: #0d1412 !important;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 245, 160, 0.16) !important;
-    border: 1.5px solid rgba(0, 245, 160, 0.3) !important;
+    background: #090e0c !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(0, 245, 160, 0.22) !important;
+    border: 1.5px solid rgba(0, 245, 160, 0.35) !important;
+  }
+
+  /* Remove all dark overlays on mobile so video is 100% full bright and clear */
+  .home-hero-media::after,
+  .home-hero-media:after,
+  .home-video-overlay,
+  .home-glow {
+    display: none !important;
+    opacity: 0 !important;
   }
 
   .home-hero-video {
@@ -14469,8 +14480,8 @@ h3 em {
     height: 100% !important;
     max-width: 100% !important;
     object-fit: cover !important;
-    object-position: center 25% !important;
-    filter: contrast(1.1) brightness(1.05) saturate(1.18) !important;
+    object-position: center center !important;
+    filter: contrast(1.08) brightness(1.04) saturate(1.18) !important;
     -webkit-transform: translate3d(0, 0, 0) !important;
     transform: translate3d(0, 0, 0) !important;
   }
@@ -14522,8 +14533,8 @@ h3 em {
   }
 
   .what-we-do-section {
-    margin-top: 70px !important;
-    padding: 70px 0 40px !important;
+    margin-top: 85px !important;
+    padding: 85px 0 45px !important;
   }
 }
 
