@@ -44,7 +44,7 @@ vercel --prod
 ---
 
 ## 📍 Lab Location & Contact Information Configured
-- **Lab Address:** Shanti Kunj Apartment, Jai Balaji Enterprises Wali Gali, Opp. Jawed Habib, 90 Feet Road, Pillar No. 26, Patna.
+- **Lab Address:** 26, 90 Feet Rd, Bhabha Colony, Kankarbagh, Hanuman Nagar, Patna, Bihar 800020.
 - **Phone / Calling:** `+91 9931023041`
 - **WhatsApp:** Direct link to `https://wa.me/919931023041` with automated trial session query.
 - **Normal SMS:** Dedicated 3D Robo Mascot widget triggering native phone SMS to `9931023041`.
