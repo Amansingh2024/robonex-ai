@@ -14281,21 +14281,28 @@ h3 em {
   min-height: 100dvh !important;
 }
 
-/* --- SUMMARY CARD: glass card bottom-left --- */
+/* --- SUMMARY CARD: 100% TRANSPARENT FLOATING TEXT OVER VIDEO --- */
 .home-page .home-summary,
 .home-summary {
-  width: min(600px, 100%) !important;
+  width: min(650px, 100%) !important;
   max-width: 100% !important;
   margin: 0 !important;
-  padding: clamp(22px, 2.8vw, 40px) clamp(20px, 2.5vw, 44px) !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
-  border-radius: 20px !important;
-  background: rgba(6, 12, 10, 0.72) !important;
-  border: 1px solid rgba(216, 255, 75, 0.2) !important;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.06) !important;
-  backdrop-filter: blur(18px) !important;
-  -webkit-backdrop-filter: blur(18px) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   color: #fff !important;
+}
+
+.home-page .home-summary:hover,
+.home-summary:hover {
+  box-shadow: none !important;
+  background: transparent !important;
+  border: none !important;
 }
 
 .home-summary h1 {
@@ -14304,12 +14311,14 @@ h3 em {
   margin: 6px 0 10px !important;
   color: #fff !important;
   letter-spacing: -0.5px !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85), 0 4px 30px rgba(0, 0, 0, 0.7) !important;
 }
 
 .home-summary .eyebrow {
   font-size: clamp(9px, 1vw, 11px) !important;
   letter-spacing: 1.5px !important;
   margin-bottom: 8px !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8) !important;
 }
 
 .hero-truth {
@@ -14452,20 +14461,20 @@ h3 em {
     align-items: flex-start !important;
   }
 
-  /* SUMMARY CARD: clean glass on top of video */
+  /* SUMMARY CARD: 100% transparent text on top of video */
   .home-page .home-summary,
   .home-summary {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding: 22px 20px 20px !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
-    background: rgba(8, 14, 12, 0.75) !important;
-    border: 1px solid rgba(216, 255, 75, 0.18) !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
-    border-radius: 18px !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
   }
 
   .home-summary h1 {
@@ -15250,14 +15259,15 @@ html, body {
   .home-summary {
     width: 100%;
     max-width: 100%;
-    padding: 20px 18px 18px;
+    padding: 0 !important;
     box-sizing: border-box;
     margin: 0;
-    background: rgba(12,18,16,0.72);
-    border-radius: 20px;
-    border: 1px solid rgba(216,255,75,0.15);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
   }
 
   .home-summary h1 {
@@ -15656,8 +15666,11 @@ html, body {
   }
 
   .home-summary {
-    padding: 16px 14px !important;
-    border-radius: 16px !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
   .hero-truth {
