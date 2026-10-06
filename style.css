@@ -14179,9 +14179,9 @@ h3 em {
   padding: 0 !important;
   min-height: 100vh !important;
   min-height: 100dvh !important;
-  height: 100vh !important;
-  height: 100dvh !important;
-  overflow: hidden !important;
+  height: auto !important;
+  overflow: clip !important;
+  overflow-x: clip !important;
   background: #080e0c !important;
   display: flex !important;
   align-items: flex-end !important;
@@ -14272,7 +14272,7 @@ h3 em {
   flex: unset !important;
   max-width: 100% !important;
   width: 100% !important;
-  padding: 0 clamp(20px, 4vw, 64px) clamp(40px, 5vh, 72px) !important;
+  padding: clamp(90px, 12vh, 120px) clamp(20px, 4vw, 64px) clamp(40px, 5vh, 72px) !important;
   box-sizing: border-box !important;
   display: flex !important;
   flex-direction: column !important;
@@ -15548,14 +15548,14 @@ html, body {
 }
 
 /* --- Inner pages (curriculum, projects, lab, topic) --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .inner-hero {
-    padding-top: 80px !important;
-    padding-bottom: 40px !important;
+    padding-top: 88px !important;
+    padding-bottom: 36px !important;
   }
 
   .inner-hero h1 {
-    font-size: clamp(28px, 9vw, 48px) !important;
+    font-size: clamp(26px, 8vw, 44px) !important;
     line-height: 1.15;
     word-break: break-word;
   }
@@ -15563,7 +15563,9 @@ html, body {
   .inner-hero p {
     font-size: 13px !important;
   }
+}
 
+@media (max-width: 768px) {
   .all-projects {
     grid-template-columns: 1fr !important;
   }
@@ -15593,64 +15595,87 @@ html, body {
   }
 }
 
-/* --- WhatsApp/fixed CTA buttons --- */
+/* --- Mobile Bottom Bar & Floating Widgets: Zero Overlap --- */
 @media (max-width: 768px) {
-  .whatsapp-float,
-  [class*="whatsapp"],
-  .fixed-cta,
-  .chat-widget,
-  [class*="chat-btn"],
-  [class*="need-help"] {
-    bottom: 16px !important;
-    right: 12px !important;
-    z-index: 8000 !important;
-    max-width: calc(100vw - 24px) !important;
+  /* Hide redundant circular WhatsApp button on mobile because the sticky bottom bar already has a full-width WhatsApp button */
+  .floating-wa-container,
+  .floating-btn.floating-wa-btn {
+    display: none !important;
   }
-}
 
-/* --- Mobile bottom bar (if present) --- */
-@media (max-width: 768px) {
+  /* Hide wide speech bubble on mobile so it doesn't cover page content */
+  .robo-speech-bubble {
+    display: none !important;
+  }
+
+  .scrolling-robo-wrapper {
+    right: 12px !important;
+    z-index: 99980 !important;
+  }
+
+  .robo-avatar-wrap {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .robo-avatar-img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  /* Mobile Sticky Bottom Bar */
   .mobile-bottom-bar,
   [class*="bottom-bar"],
   [class*="mobile-bar"] {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 7000;
-    padding: 10px 12px;
+    display: block !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    z-index: 99990 !important;
+    background: rgba(10, 16, 14, 0.98) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-top: 1px solid rgba(216, 255, 75, 0.18) !important;
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.6) !important;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
-  /* Ensure content above bottom bar has padding */
+  /* Safe padding so sticky mobile bar never covers footer or content */
   body {
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+    padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)) !important;
   }
 }
 
 /* --- Extra small phones (320px - 375px) --- */
 @media (max-width: 375px) {
   .home-summary h1 {
-    font-size: clamp(30px, 9.5vw, 44px) !important;
+    font-size: clamp(24px, 8vw, 36px) !important;
   }
 
   .home-summary {
     padding: 16px 14px !important;
+    border-radius: 16px !important;
   }
 
   .hero-truth {
-    font-size: 9px;
+    font-size: 9.5px !important;
+    margin: 8px 0 10px !important;
+    gap: 3px !important;
   }
 
   .home-lead {
-    font-size: 11px !important;
+    font-size: 11.5px !important;
+    line-height: 1.45 !important;
+    margin: 8px 0 12px !important;
   }
 
   .home-actions .button {
-    font-size: 12px;
-    padding: 0 14px;
-    min-height: 42px;
+    font-size: 12px !important;
+    padding: 0 14px !important;
+    min-height: 42px !important;
   }
 
   h2 {
@@ -15662,8 +15687,8 @@ html, body {
   }
 
   .eco-icon-tab {
-    min-width: 60px;
-    font-size: 8px;
+    min-width: 60px !important;
+    font-size: 8px !important;
   }
 }
 
